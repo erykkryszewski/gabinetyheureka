@@ -959,7 +959,7 @@
 }
 
 .editor-styles-wrapper .button {
-  border: 1px solid #132a3a;
+  border: 1px solid #b22f89;
   padding: 13px 25px;
   font-size: 16px;
   text-transform: uppercase;
@@ -971,7 +971,7 @@
       -ms-flex-align: center;
           align-items: center;
   gap: 12px;
-  background: #132a3a;
+  background: #b22f89;
   color: #ffffff;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
@@ -995,8 +995,8 @@
 
 .editor-styles-wrapper .button:hover {
   color: #ffffff;
-  border: 1px solid #132a3a;
-  background: #132a3a;
+  border: 1px solid #b22f89;
+  background: #b22f89;
 }
 
 .editor-styles-wrapper .button:hover::before {
@@ -1068,8 +1068,8 @@
 }
 
 .editor-styles-wrapper .button--continue-shopping:hover, .editor-styles-wrapper .button--update-cart:hover {
-  background: #132a3a;
-  border: 1px solid #132a3a;
+  background: #b22f89;
+  border: 1px solid #b22f89;
 }
 
 .editor-styles-wrapper .button--continue-shopping::before, .editor-styles-wrapper .button--update-cart::before {
@@ -1345,7 +1345,11 @@
   }
 }
 
-.editor-styles-wrapper h1, .editor-styles-wrapper .h1, .editor-styles-wrapper h1 > strong, .editor-styles-wrapper h1 > b, .editor-styles-wrapper h1 > span {
+.editor-styles-wrapper h1,
+.editor-styles-wrapper .h1,
+.editor-styles-wrapper h1 > strong,
+.editor-styles-wrapper h1 > b,
+.editor-styles-wrapper h1 > span {
   color: #030303;
   font-family: "Figtree", serif;
   font-size: 60px;
@@ -1355,12 +1359,20 @@
 }
 
 @media (max-width: 767px) {
-  .editor-styles-wrapper h1, .editor-styles-wrapper .h1, .editor-styles-wrapper h1 > strong, .editor-styles-wrapper h1 > b, .editor-styles-wrapper h1 > span {
+  .editor-styles-wrapper h1,
+  .editor-styles-wrapper .h1,
+  .editor-styles-wrapper h1 > strong,
+  .editor-styles-wrapper h1 > b,
+  .editor-styles-wrapper h1 > span {
     font-size: 58px;
   }
 }
 
-.editor-styles-wrapper h2, .editor-styles-wrapper .h2, .editor-styles-wrapper h2 > strong, .editor-styles-wrapper h2 > b, .editor-styles-wrapper h2 > span {
+.editor-styles-wrapper h2,
+.editor-styles-wrapper .h2,
+.editor-styles-wrapper h2 > strong,
+.editor-styles-wrapper h2 > b,
+.editor-styles-wrapper h2 > span {
   color: #030303;
   font-family: "Figtree", serif;
   font-size: 35px;
@@ -1369,12 +1381,20 @@
 }
 
 @media (max-width: 1199px) {
-  .editor-styles-wrapper h2, .editor-styles-wrapper .h2, .editor-styles-wrapper h2 > strong, .editor-styles-wrapper h2 > b, .editor-styles-wrapper h2 > span {
+  .editor-styles-wrapper h2,
+  .editor-styles-wrapper .h2,
+  .editor-styles-wrapper h2 > strong,
+  .editor-styles-wrapper h2 > b,
+  .editor-styles-wrapper h2 > span {
     font-size: 30px;
   }
 }
 
-.editor-styles-wrapper h3, .editor-styles-wrapper .h3, .editor-styles-wrapper h3 > strong, .editor-styles-wrapper h3 > b, .editor-styles-wrapper h3 > span {
+.editor-styles-wrapper h3,
+.editor-styles-wrapper .h3,
+.editor-styles-wrapper h3 > strong,
+.editor-styles-wrapper h3 > b,
+.editor-styles-wrapper h3 > span {
   color: #030303;
   font-family: "Figtree", serif;
   font-size: 26px;
@@ -1383,12 +1403,20 @@
 }
 
 @media (max-width: 1199px) {
-  .editor-styles-wrapper h3, .editor-styles-wrapper .h3, .editor-styles-wrapper h3 > strong, .editor-styles-wrapper h3 > b, .editor-styles-wrapper h3 > span {
+  .editor-styles-wrapper h3,
+  .editor-styles-wrapper .h3,
+  .editor-styles-wrapper h3 > strong,
+  .editor-styles-wrapper h3 > b,
+  .editor-styles-wrapper h3 > span {
     font-size: 22px;
   }
 }
 
-.editor-styles-wrapper h4, .editor-styles-wrapper .h4, .editor-styles-wrapper h4 > strong, .editor-styles-wrapper h4 > b, .editor-styles-wrapper h4 > span {
+.editor-styles-wrapper h4,
+.editor-styles-wrapper .h4,
+.editor-styles-wrapper h4 > strong,
+.editor-styles-wrapper h4 > b,
+.editor-styles-wrapper h4 > span {
   color: #030303;
   font-family: "Figtree", serif;
   font-size: 20px;
@@ -1397,20 +1425,27 @@
 }
 
 @media (max-width: 1199px) {
-  .editor-styles-wrapper h4, .editor-styles-wrapper .h4, .editor-styles-wrapper h4 > strong, .editor-styles-wrapper h4 > b, .editor-styles-wrapper h4 > span {
+  .editor-styles-wrapper h4,
+  .editor-styles-wrapper .h4,
+  .editor-styles-wrapper h4 > strong,
+  .editor-styles-wrapper h4 > b,
+  .editor-styles-wrapper h4 > span {
     font-size: 18px;
   }
 }
 
-.editor-styles-wrapper p, .editor-styles-wrapper .paragraph {
+.editor-styles-wrapper p,
+.editor-styles-wrapper .paragraph {
   font-size: 17px;
   line-height: 1.65;
   font-weight: 400;
   margin: 20px 0 0;
+  letter-spacing: 0.5px;
   color: #030303;
 }
 
-.editor-styles-wrapper p > a, .editor-styles-wrapper .paragraph > a {
+.editor-styles-wrapper p > a,
+.editor-styles-wrapper .paragraph > a {
   font-weight: 500;
   font-size: 17px;
   line-height: 1.65;
@@ -1419,39 +1454,51 @@
   color: #030303;
 }
 
-.editor-styles-wrapper p > a:hover, .editor-styles-wrapper .paragraph > a:hover {
+.editor-styles-wrapper p > a:hover,
+.editor-styles-wrapper .paragraph > a:hover {
   text-decoration: underline;
   color: #030303;
 }
 
-.editor-styles-wrapper p > strong, .editor-styles-wrapper .paragraph > strong {
+.editor-styles-wrapper p > strong,
+.editor-styles-wrapper .paragraph > strong {
   font-weight: 600;
   font-size: 17px;
   line-height: 1.65;
   color: #030303;
 }
 
-.editor-styles-wrapper p > span, .editor-styles-wrapper .paragraph > span {
+.editor-styles-wrapper p > span,
+.editor-styles-wrapper .paragraph > span {
   font-size: 17px;
   line-height: 1.65;
   font-weight: 400;
   color: #030303;
 }
 
-.editor-styles-wrapper ul > li, .editor-styles-wrapper ol > li, .editor-styles-wrapper ul.wp-block-list li, .editor-styles-wrapper ol.wp-block-list li {
+.editor-styles-wrapper ul > li,
+.editor-styles-wrapper ol > li,
+.editor-styles-wrapper ul.wp-block-list li,
+.editor-styles-wrapper ol.wp-block-list li {
   font-size: 17px;
   line-height: 1.65;
   font-weight: 400;
 }
 
-.editor-styles-wrapper ul > li > strong, .editor-styles-wrapper ol > li > strong, .editor-styles-wrapper ul.wp-block-list li > strong, .editor-styles-wrapper ol.wp-block-list li > strong {
+.editor-styles-wrapper ul > li > strong,
+.editor-styles-wrapper ol > li > strong,
+.editor-styles-wrapper ul.wp-block-list li > strong,
+.editor-styles-wrapper ol.wp-block-list li > strong {
   font-weight: 600;
   font-size: 17px;
   line-height: 1.65;
   color: #030303;
 }
 
-.editor-styles-wrapper ul > li > span, .editor-styles-wrapper ol > li > span, .editor-styles-wrapper ul.wp-block-list li > span, .editor-styles-wrapper ol.wp-block-list li > span {
+.editor-styles-wrapper ul > li > span,
+.editor-styles-wrapper ol > li > span,
+.editor-styles-wrapper ul.wp-block-list li > span,
+.editor-styles-wrapper ol.wp-block-list li > span {
   font-size: 17px;
   line-height: 1.65;
   font-weight: 400;
