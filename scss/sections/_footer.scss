@@ -14,13 +14,16 @@
   &__logo {
     display: inline-block;
 
-    img, svg {
-      max-width: 200px;
+    img,
+    svg {
+      max-width: 150px;
       height: auto;
+      width: 150px;
     }
   }
 
-  &__phone, &__email {
+  &__phone,
+  &__email {
     display: block;
     font-weight: 400;
     font-size: 16px;
@@ -46,15 +49,18 @@
   }
 
   &__subtitle {
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
       margin: 25px auto 0;
     }
   }
 
   &__column {
     width: 100%;
-    
-    h1, h2, h3, h4 {
+
+    h1,
+    h2,
+    h3,
+    h4 {
       @extend .h3;
       margin: 3px 0 0;
     }

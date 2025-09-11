@@ -19,8 +19,7 @@ $hero_cta_button = get_field('hero_cta_button');
   <?php if (!empty($section_id)): ?>
   <div class="section-id" id="<?php echo esc_html($section_id); ?>"></div>
   <?php endif; ?>
-  <div
-    class="<?php if ($full_width == 'true') {
+  <div class="<?php if ($full_width == 'true') {
       echo 'container-fluid container-fluid--max-width';
     } else {
       echo 'container';
@@ -30,8 +29,7 @@ $hero_cta_button = get_field('hero_cta_button');
       <div class="cta-hero__item">
         <?php if (!empty($item['video'])): ?>
         <div class="cta-hero__video">
-          <video frameborder="0" loading="lazy" autoplay="" loop="" playsinline="" muted=""
-            src="<?php echo esc_html($item['video']); ?>" autoplay="autoplay" class="object-fit-cover"></video>
+          <video frameborder="0" loading="lazy" autoplay="" loop="" playsinline="" muted="" src="<?php echo esc_html($item['video']); ?>" autoplay="autoplay" class="object-fit-cover"></video>
           <?php if ('true' == $item['overlay']): ?>
           <div class="cta-hero__overlay"></div>
           <?php endif; ?>
@@ -53,8 +51,7 @@ $hero_cta_button = get_field('hero_cta_button');
         } ?>">
           <div class="row">
             <div class="col-12">
-              <div
-                class="cta-hero__content <?php if ($full_width == 'true') {
+              <div class="cta-hero__content <?php if ($full_width == 'true') {
                   echo 'cta-hero__content--full';
                 } else {
                   echo '';
@@ -75,10 +72,7 @@ $hero_cta_button = get_field('hero_cta_button');
                 <?php echo apply_filters('acf_the_content', str_replace('&nbsp;', ' ', $item['text'])); ?>
                 <?php endif; ?>
                 <?php if (!empty($item['button'])): ?>
-                <a href="<?php echo esc_html($item['button']['url']); ?>" class="button cta-hero__button"
-                  target="<?php echo esc_html($item['button']['target']); ?>"><?php echo esc_html(
-  $item['button']['title'],
-); ?></a>
+                <a href="<?php echo esc_html($item['button']['url']); ?>" class="button cta-hero__button" target="<?php echo esc_html($item['button']['target']); ?>"><?php echo esc_html($item['button']['title'],); ?></a>
                 <?php endif; ?>
               </div>
             </div>
@@ -88,6 +82,7 @@ $hero_cta_button = get_field('hero_cta_button');
       <?php endforeach; ?>
     </div>
   </div>
+  <?php if(!empty($hero_cta_button)):?>
   <div class="container">
     <div class="button-banner cta-hero__button-banner">
       <div class="button-banner__wrapper">
@@ -103,8 +98,7 @@ $hero_cta_button = get_field('hero_cta_button');
           <?php if (!empty($hero_cta_button)): ?>
           <div class="col-md-6 col-lg-4">
             <div class="button-banner__link-wrapper">
-              <a href="<?php echo esc_html($hero_cta_button['url']); ?>"
-                class="button-banner__button button"><?php echo esc_html($hero_cta_button['title']); ?></a>
+              <a href="<?php echo esc_html($hero_cta_button['url']); ?>" class="button-banner__button button"><?php echo esc_html($hero_cta_button['title']); ?></a>
             </div>
           </div>
           <?php endif; ?>
@@ -112,6 +106,7 @@ $hero_cta_button = get_field('hero_cta_button');
       </div>
     </div>
   </div>
+  <?php endif;?>
 </div>
 <?php endif; ?>
 <?php if (!is_front_page()): ?>

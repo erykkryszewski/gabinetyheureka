@@ -2,6 +2,24 @@
   width: 100%;
   position: relative;
 
+  &__wrapper {
+    padding: 0 0 0 30px;
+    width: 100%;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      top: 5px;
+      left: 0;
+      height: calc(100% - 10px);
+      width: 6px;
+      border-radius: $theme-border-radius;
+      background: $theme-color;
+      position: absolute;
+    }
+  }
+
   &__title {
     text-transform: initial;
     max-width: 1050px;

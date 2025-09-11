@@ -16,7 +16,7 @@ $text = get_field('text');
   <?php endif; ?>
   <div class="container">
     <div class="decorated-text__wrapper">
-      <h3 class="decorated-text__title"><?php echo esc_html(str_replace('&nbsp;', ' ', $text)); ?></h3>
+      <h2 class="decorated-text__title"><?php echo esc_html(str_replace('&nbsp;', ' ', $text)); ?></h2>
     </div>
   </div>
 </div>

@@ -11,7 +11,8 @@
 /**
  * Variables
  */
-.container, .container-fluid {
+.container,
+.container-fluid {
   margin-right: auto;
   margin-left: auto;
   width: 100%;
@@ -36,7 +37,76 @@
   margin-left: -15px;
 }
 
-.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+.col,
+.col-1,
+.col-10,
+.col-11,
+.col-12,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-auto,
+.col-lg,
+.col-lg-1,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-auto,
+.col-md,
+.col-md-1,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-auto,
+.col-sm,
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-auto,
+.col-xl,
+.col-xl-1,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12,
+.col-xl-2,
+.col-xl-3,
+.col-xl-4,
+.col-xl-5,
+.col-xl-6,
+.col-xl-7,
+.col-xl-8,
+.col-xl-9,
+.col-xl-auto {
   position: relative;
   width: 100%;
   padding-right: 15px;
@@ -113,25 +183,29 @@
             flex-grow: 1;
     max-width: 100%;
   }
-  .col-sm-12, .row-cols-sm-1 > * {
+  .col-sm-12,
+  .row-cols-sm-1 > * {
     -ms-flex: 0 0 100%;
     -webkit-box-flex: 0;
             flex: 0 0 100%;
     max-width: 100%;
   }
-  .col-sm-6, .row-cols-sm-2 > * {
+  .col-sm-6,
+  .row-cols-sm-2 > * {
     -ms-flex: 0 0 50%;
     -webkit-box-flex: 0;
             flex: 0 0 50%;
     max-width: 50%;
   }
-  .col-sm-4, .row-cols-sm-3 > * {
+  .col-sm-4,
+  .row-cols-sm-3 > * {
     -ms-flex: 0 0 33.333333%;
     -webkit-box-flex: 0;
             flex: 0 0 33.333333%;
     max-width: 33.333333%;
   }
-  .col-sm-3, .row-cols-sm-4 > * {
+  .col-sm-3,
+  .row-cols-sm-4 > * {
     -ms-flex: 0 0 25%;
     -webkit-box-flex: 0;
             flex: 0 0 25%;
@@ -143,7 +217,8 @@
             flex: 0 0 20%;
     max-width: 20%;
   }
-  .col-sm-2, .row-cols-sm-6 > * {
+  .col-sm-2,
+  .row-cols-sm-6 > * {
     -ms-flex: 0 0 16.666667%;
     -webkit-box-flex: 0;
             flex: 0 0 16.666667%;
@@ -323,25 +398,29 @@
             flex-grow: 1;
     max-width: 100%;
   }
-  .col-md-12, .row-cols-md-1 > * {
+  .col-md-12,
+  .row-cols-md-1 > * {
     -ms-flex: 0 0 100%;
     -webkit-box-flex: 0;
             flex: 0 0 100%;
     max-width: 100%;
   }
-  .col-md-6, .row-cols-md-2 > * {
+  .col-md-6,
+  .row-cols-md-2 > * {
     -ms-flex: 0 0 50%;
     -webkit-box-flex: 0;
             flex: 0 0 50%;
     max-width: 50%;
   }
-  .col-md-4, .row-cols-md-3 > * {
+  .col-md-4,
+  .row-cols-md-3 > * {
     -ms-flex: 0 0 33.333333%;
     -webkit-box-flex: 0;
             flex: 0 0 33.333333%;
     max-width: 33.333333%;
   }
-  .col-md-3, .row-cols-md-4 > * {
+  .col-md-3,
+  .row-cols-md-4 > * {
     -ms-flex: 0 0 25%;
     -webkit-box-flex: 0;
             flex: 0 0 25%;
@@ -353,7 +432,8 @@
             flex: 0 0 20%;
     max-width: 20%;
   }
-  .col-md-2, .row-cols-md-6 > * {
+  .col-md-2,
+  .row-cols-md-6 > * {
     -ms-flex: 0 0 16.666667%;
     -webkit-box-flex: 0;
             flex: 0 0 16.666667%;
@@ -533,25 +613,29 @@
             flex-grow: 1;
     max-width: 100%;
   }
-  .col-lg-12, .row-cols-lg-1 > * {
+  .col-lg-12,
+  .row-cols-lg-1 > * {
     -ms-flex: 0 0 100%;
     -webkit-box-flex: 0;
             flex: 0 0 100%;
     max-width: 100%;
   }
-  .col-lg-6, .row-cols-lg-2 > * {
+  .col-lg-6,
+  .row-cols-lg-2 > * {
     -ms-flex: 0 0 50%;
     -webkit-box-flex: 0;
             flex: 0 0 50%;
     max-width: 50%;
   }
-  .col-lg-4, .row-cols-lg-3 > * {
+  .col-lg-4,
+  .row-cols-lg-3 > * {
     -ms-flex: 0 0 33.333333%;
     -webkit-box-flex: 0;
             flex: 0 0 33.333333%;
     max-width: 33.333333%;
   }
-  .col-lg-3, .row-cols-lg-4 > * {
+  .col-lg-3,
+  .row-cols-lg-4 > * {
     -ms-flex: 0 0 25%;
     -webkit-box-flex: 0;
             flex: 0 0 25%;
@@ -563,7 +647,8 @@
             flex: 0 0 20%;
     max-width: 20%;
   }
-  .col-lg-2, .row-cols-lg-6 > * {
+  .col-lg-2,
+  .row-cols-lg-6 > * {
     -ms-flex: 0 0 16.666667%;
     -webkit-box-flex: 0;
             flex: 0 0 16.666667%;
@@ -733,7 +818,7 @@
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1190px;
+    max-width: 1220px;
   }
   .col-xl {
     -ms-flex-preferred-size: 0;
@@ -743,25 +828,29 @@
             flex-grow: 1;
     max-width: 100%;
   }
-  .col-xl-12, .row-cols-xl-1 > * {
+  .col-xl-12,
+  .row-cols-xl-1 > * {
     -ms-flex: 0 0 100%;
     -webkit-box-flex: 0;
             flex: 0 0 100%;
     max-width: 100%;
   }
-  .col-xl-6, .row-cols-xl-2 > * {
+  .col-xl-6,
+  .row-cols-xl-2 > * {
     -ms-flex: 0 0 50%;
     -webkit-box-flex: 0;
             flex: 0 0 50%;
     max-width: 50%;
   }
-  .col-xl-4, .row-cols-xl-3 > * {
+  .col-xl-4,
+  .row-cols-xl-3 > * {
     -ms-flex: 0 0 33.333333%;
     -webkit-box-flex: 0;
             flex: 0 0 33.333333%;
     max-width: 33.333333%;
   }
-  .col-xl-3, .row-cols-xl-4 > * {
+  .col-xl-3,
+  .row-cols-xl-4 > * {
     -ms-flex: 0 0 25%;
     -webkit-box-flex: 0;
             flex: 0 0 25%;
@@ -773,7 +862,8 @@
             flex: 0 0 20%;
     max-width: 20%;
   }
-  .col-xl-2, .row-cols-xl-6 > * {
+  .col-xl-2,
+  .row-cols-xl-6 > * {
     -ms-flex: 0 0 16.666667%;
     -webkit-box-flex: 0;
             flex: 0 0 16.666667%;
@@ -962,8 +1052,9 @@
   border: 1px solid #b22f89;
   padding: 13px 25px;
   font-size: 16px;
-  text-transform: uppercase;
   font-weight: 600;
+  min-width: 120px;
+  text-transform: uppercase;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -975,12 +1066,11 @@
   color: #ffffff;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
-  border-radius: 15px !important;
+  border-radius: 15px;
   white-space: nowrap;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   text-align: center;
-  min-width: 120px;
   line-height: 1 !important;
   position: relative;
   overflow: hidden;
@@ -1062,9 +1152,9 @@
 
 .editor-styles-wrapper .button--continue-shopping, .editor-styles-wrapper .button--update-cart {
   margin: 10px 0 0;
-  border: 1px solid #030303;
+  border: 1px solid #383838;
   background: transparent;
-  color: #030303;
+  color: #383838;
 }
 
 .editor-styles-wrapper .button--continue-shopping:hover, .editor-styles-wrapper .button--update-cart:hover {
@@ -1078,8 +1168,16 @@
 
 .editor-styles-wrapper .button--ghost {
   background: transparent;
-  border: 1px solid #030303;
-  color: #030303;
+  border: 1px solid #383838;
+  color: #383838;
+}
+
+.editor-styles-wrapper .button--small {
+  padding: 9px 15px;
+  font-size: 13px;
+  font-weight: 600;
+  min-width: 80px;
+  border-radius: 11px;
 }
 
 .editor-styles-wrapper .button--inactive {
@@ -1139,7 +1237,7 @@
   overflow-x: hidden;
   position: relative;
   font-weight: 400;
-  color: #030303;
+  color: #383838;
 }
 
 .editor-styles-wrapper body.archive {
@@ -1299,7 +1397,7 @@
 .editor-styles-wrapper .gfield_required.gfield_required_text {
   font-style: normal !important;
   font-size: 12px !important;
-  color: #030303 !important;
+  color: #383838 !important;
 }
 
 .editor-styles-wrapper .gfield_required_text {
@@ -1307,7 +1405,7 @@
 }
 
 .editor-styles-wrapper .gform_wrapper.gravity-theme .gform_validation_errors {
-  border-radius: 15px !important;
+  border-radius: 20px !important;
   margin: 0 0 25px !important;
 }
 
@@ -1350,11 +1448,11 @@
 .editor-styles-wrapper h1 > strong,
 .editor-styles-wrapper h1 > b,
 .editor-styles-wrapper h1 > span {
-  color: #030303;
+  color: #383838;
   font-family: "Figtree", serif;
-  font-size: 60px;
+  font-size: 45px;
   line-height: 1.1;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -1364,7 +1462,7 @@
   .editor-styles-wrapper h1 > strong,
   .editor-styles-wrapper h1 > b,
   .editor-styles-wrapper h1 > span {
-    font-size: 58px;
+    font-size: 38px;
   }
 }
 
@@ -1373,11 +1471,11 @@
 .editor-styles-wrapper h2 > strong,
 .editor-styles-wrapper h2 > b,
 .editor-styles-wrapper h2 > span {
-  color: #030303;
+  color: #383838;
   font-family: "Figtree", serif;
   font-size: 35px;
   line-height: 1.1;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 @media (max-width: 1199px) {
@@ -1395,11 +1493,11 @@
 .editor-styles-wrapper h3 > strong,
 .editor-styles-wrapper h3 > b,
 .editor-styles-wrapper h3 > span {
-  color: #030303;
+  color: #383838;
   font-family: "Figtree", serif;
-  font-size: 26px;
+  font-size: 23px;
   line-height: 1.1;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 @media (max-width: 1199px) {
@@ -1417,7 +1515,7 @@
 .editor-styles-wrapper h4 > strong,
 .editor-styles-wrapper h4 > b,
 .editor-styles-wrapper h4 > span {
-  color: #030303;
+  color: #383838;
   font-family: "Figtree", serif;
   font-size: 20px;
   line-height: 1.1;
@@ -1441,7 +1539,7 @@
   font-weight: 400;
   margin: 20px 0 0;
   letter-spacing: 0.5px;
-  color: #030303;
+  color: #383838;
 }
 
 .editor-styles-wrapper p > a,
@@ -1451,13 +1549,13 @@
   line-height: 1.65;
   text-decoration: underline;
   display: inline-block;
-  color: #030303;
+  color: #383838;
 }
 
 .editor-styles-wrapper p > a:hover,
 .editor-styles-wrapper .paragraph > a:hover {
   text-decoration: underline;
-  color: #030303;
+  color: #383838;
 }
 
 .editor-styles-wrapper p > strong,
@@ -1465,7 +1563,7 @@
   font-weight: 600;
   font-size: 17px;
   line-height: 1.65;
-  color: #030303;
+  color: #383838;
 }
 
 .editor-styles-wrapper p > span,
@@ -1473,7 +1571,7 @@
   font-size: 17px;
   line-height: 1.65;
   font-weight: 400;
-  color: #030303;
+  color: #383838;
 }
 
 .editor-styles-wrapper ul > li,
@@ -1492,7 +1590,7 @@
   font-weight: 600;
   font-size: 17px;
   line-height: 1.65;
-  color: #030303;
+  color: #383838;
 }
 
 .editor-styles-wrapper ul > li > span,
@@ -1502,7 +1600,7 @@
   font-size: 17px;
   line-height: 1.65;
   font-weight: 400;
-  color: #030303;
+  color: #383838;
 }
 
 #adminmenu li#menu-comments {

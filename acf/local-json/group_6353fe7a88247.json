@@ -26,8 +26,8 @@
             "sub_fields": [
                 {
                     "key": "field_6353fecd338d7",
-                    "label": "Image",
-                    "name": "image",
+                    "label": "Icon",
+                    "name": "icon",
                     "aria-label": "",
                     "type": "image",
                     "instructions": "",
@@ -67,8 +67,8 @@
                     "default_value": "",
                     "tabs": "all",
                     "toolbar": "full",
-                    "media_upload": 1,
-                    "delay": 0,
+                    "media_upload": 0,
+                    "delay": 1,
                     "parent_repeater": "field_6353fe7a338d6"
                 },
                 {
@@ -109,5 +109,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737316805
+    "modified": 1757632965
 }
