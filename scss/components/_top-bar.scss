@@ -1,5 +1,5 @@
 .top-bar {
-  background: $very-light-gray;
+  background: transparent;
   width: 100%;
   border-bottom: 1px solid $light-gray;
 
@@ -10,9 +10,9 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 10px 20px;
-    padding: 10px 0;
+    padding: 8px 0;
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
       justify-content: center;
       flex-direction: column;
     }
@@ -23,11 +23,11 @@
     align-items: center;
     gap: 10px 20px;
     flex-wrap: wrap;
-    
+
     &--left {
       justify-content: flex-start;
-            
-      @media(max-width: 767px) {
+
+      @media (max-width: 767px) {
         justify-content: center;
       }
     }
@@ -35,17 +35,18 @@
     &--right {
       justify-content: flex-end;
 
-      @media(max-width: 767px) {
+      @media (max-width: 767px) {
         justify-content: center;
       }
     }
   }
 
-  &__phone, &__email {
+  &__phone,
+  &__email {
     display: flex;
     gap: 8px;
     color: $text-color;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
 
     &::before {

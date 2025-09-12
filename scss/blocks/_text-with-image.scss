@@ -79,6 +79,21 @@
     }
   }
 
+  &__content {
+    h2,
+    h3,
+    h4 {
+      @extend .paragraph;
+      font-weight: 600;
+      margin: 20px 0 0;
+      font-size: 19px;
+    }
+
+    p {
+      font-size: 19px;
+    }
+  }
+
   &__title {
     color: $theme-color;
   }

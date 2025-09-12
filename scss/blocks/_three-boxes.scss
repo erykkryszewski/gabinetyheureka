@@ -31,7 +31,7 @@
     height: 50px;
     padding: 10px;
     border-radius: 10px;
-    background: $theme-color;
+    background: $gray;
     z-index: 1;
     transition: all 350ms ease;
     padding: 10px;
@@ -53,12 +53,12 @@
     h5 {
       @extend .h3;
       margin: 25px 0 0;
-      min-height: 51px;
     }
 
     p {
       font-size: 15px;
       margin: 15px 0 0;
+      line-height: 1.4;
     }
   }
 
