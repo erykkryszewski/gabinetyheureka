@@ -1,0 +1,33 @@
+.arrow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 15px;
+  line-height: 100%;
+  font-weight: 600 !important;
+  color: $theme-color;
+  text-decoration: none;
+
+  &::after {
+    display: block;
+    content: '';
+    background-image: url('./images/arrow-icon.svg');
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    position: relative;
+    transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+    right: 0;
+  }
+
+  &:hover {
+    color: $theme-color;
+
+    &::after {
+      right: -8px;
+    }
+  }
+}

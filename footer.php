@@ -11,6 +11,8 @@ $google_analytics_code = get_field('google_analytics_code', 'options');
 
 $footer_second_column_content = get_field('footer_second_column_content', 'options');
 $footer_third_column_content = get_field('footer_third_column_content', 'options');
+$footer_fourth_column_content = get_field('footer_fourth_column_content', 'options');
+$footer_fifth_column_content = get_field('footer_fifth_column_content', 'options');
 
 ?>
 
@@ -18,7 +20,7 @@ $footer_third_column_content = get_field('footer_third_column_content', 'options
   <div class="container">
     <div class="footer__wrapper">
       <div class="row">
-        <div class="col-12 col-lg-4">
+        <div class="col-12 col-lg-4 col-xl-3">
           <div class="footer__column">
             <a href="/" class="footer__logo mb-4">
               <?php if(!empty($global_logo)) {
@@ -29,7 +31,7 @@ $footer_third_column_content = get_field('footer_third_column_content', 'options
 							} ?>
             </a>
             <?php if(!empty($global_phone_number)):?>
-            <a href="tel:<?php echo esc_html($global_phone_number);?>" class="footer__phone ercodingtheme-phone-number">Tel: <?php echo esc_html($global_phone_number);?></a>
+            <a href="tel:<?php echo esc_html($global_phone_number);?>" class="footer__phone">Tel: <span class="ercodingtheme-phone-number"><?php echo esc_html($global_phone_number);?></span></a>
             <?php endif;?>
             <?php if(!empty($global_email)):?>
             <a href="mailto:<?php echo esc_html($global_email);?>" class="footer__email">Email: <?php echo esc_html($global_email);?></a>
@@ -52,16 +54,30 @@ $footer_third_column_content = get_field('footer_third_column_content', 'options
           </div>
         </div>
         <?php if(!empty($footer_second_column_content)):?>
-        <div class="col-12 col-lg-4">
+        <div class="col-12 col-lg-4 col-xl-3">
           <div class="footer__column">
             <?php echo apply_filters('the_title', $footer_second_column_content);?>
           </div>
         </div>
         <?php endif;?>
         <?php if(!empty($footer_third_column_content)):?>
-        <div class="col-12 col-lg-4">
+        <div class="col-12 col-lg-4 col-xl-2">
           <div class="footer__column">
             <?php echo apply_filters('the_title', $footer_third_column_content);?>
+          </div>
+        </div>
+        <?php endif;?>
+        <?php if(!empty($footer_fourth_column_content)):?>
+        <div class="col-12 col-lg-4 col-xl-2">
+          <div class="footer__column">
+            <?php echo apply_filters('the_title', $footer_fourth_column_content);?>
+          </div>
+        </div>
+        <?php endif;?>
+        <?php if(!empty($footer_fifth_column_content)):?>
+        <div class="col-12 col-lg-4 col-xl-2">
+          <div class="footer__column">
+            <?php echo apply_filters('the_title', $footer_fifth_column_content);?>
           </div>
         </div>
         <?php endif;?>
@@ -71,7 +87,7 @@ $footer_third_column_content = get_field('footer_third_column_content', 'options
   <div class="bottom-bar">
     <div class="container">
       <div class="bottom-bar__wrapper">
-        <p><?php _e('Copyright', 'ercodingtheme');?> © <?php echo date("Y"); ?>&nbsp;<?php _e('Ercoding', 'ercodingtheme');?></p>
+        <p><?php _e('Copyright', 'ercodingtheme');?> © <?php echo date("Y"); ?>&nbsp;<?php _e('Gabinety Heureka', 'ercodingtheme');?></p>
         <p>Strona stworzona przez <a href="https://ercoding.pl/" target="_blank">Ercoding</a></p>
       </div>
     </div>

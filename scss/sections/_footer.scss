@@ -8,7 +8,7 @@
   }
 
   &__wrapper {
-    padding: 90px 0 80px;
+    padding: 40px 0 0px;
   }
 
   &__logo {
@@ -26,7 +26,7 @@
   &__email {
     display: block;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   &__phone {
@@ -36,15 +36,15 @@
   &__address {
     span {
       display: block;
-      font-size: 16px;
-      color: $black;
+      font-size: 15px;
+      color: $text-color;
       font-weight: 500;
       margin: 15px 0 0;
     }
 
     p {
       margin: 0;
-      font-size: 16px;
+      font-size: 15px;
     }
   }
 
@@ -61,7 +61,7 @@
     h2,
     h3,
     h4 {
-      @extend .h3;
+      @extend .h4;
       margin: 3px 0 0;
     }
 
@@ -72,11 +72,11 @@
       li {
         margin: 8px 0 0;
         list-style: none;
+        font-size: 15px;
 
         a {
-          color: $black;
-          font-size: 16px;
-          line-height: 1.5;
+          color: $text-color;
+          font-size: 15px;
           max-width: 200px;
         }
       }

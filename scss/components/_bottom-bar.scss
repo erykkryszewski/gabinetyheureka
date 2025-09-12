@@ -11,20 +11,20 @@
     flex-wrap: wrap;
     padding: 15px 0;
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
       justify-content: center;
       flex-direction: column;
     }
 
     p {
       color: $very-light-gray;
-      font-size: 12px;
+      font-size: 13px;
       margin: 0;
 
       a {
         color: $theme-color;
-        font-size: 12px;
-        font-weight: 700;
+        font-size: 13px;
+        font-weight: 600;
         text-decoration: none;
       }
     }

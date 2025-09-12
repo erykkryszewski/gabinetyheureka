@@ -45,13 +45,17 @@
   }
 
   &__wrapper {
-    padding: 130px 0;
+    padding: 70px 0;
     position: relative;
     z-index: 2;
   }
 
   &__subtitle {
     margin: 10px 0 0;
+  }
+
+  &__title {
+    @extend .h1;
   }
 
   &__title,
@@ -72,14 +76,14 @@
 
   &__button {
     margin: 35px 0 0;
-    background: $white;
-    color: $theme-color;
-    border: 1px solid $white;
+    background: $theme-color2;
+    color: $white;
+    border: 1px solid $theme-color2;
 
     &:hover {
-      background: $white;
-      color: $theme-color;
-      border: 1px solid $white;
+      background: $theme-color2;
+      color: $white;
+      border: 1px solid $theme-color2;
     }
   }
 
