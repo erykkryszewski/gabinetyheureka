@@ -51,8 +51,7 @@
       }
     }
 
-    &::before {
-      content: '';
+    .before {
       display: block;
       position: absolute;
       top: -30px;
@@ -64,8 +63,8 @@
       opacity: 0.1;
       z-index: 1;
     }
-    &::after {
-      content: '';
+
+    .after {
       display: block;
       position: absolute;
       bottom: -100px;
@@ -80,6 +79,9 @@
   }
 
   &__content {
+    width: 100%;
+    max-width: 551px;
+
     h2,
     h3,
     h4 {

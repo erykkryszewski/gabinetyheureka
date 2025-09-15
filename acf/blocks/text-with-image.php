@@ -6,6 +6,7 @@ $content = get_field('content');
 $image = get_field('image');
 $image_class = get_field('image_class');
 $image_size = get_field('image_size');
+$image_decorated = get_field('image_decorated');
 $direction = get_field('direction');
 $button = get_field('button');
 $button_full_width = get_field('button_full_width');
@@ -30,6 +31,10 @@ $button_full_width = get_field('button_full_width');
       <?php if (!empty($image)): ?>
       <div class="col-12 col-md-6">
         <div class="text-with-image__picture <?php if ('reverse' == $direction) { echo 'text-with-image__picture--reverse';} ?> <?php if ('big' == $image_size) { echo 'text-with-image__picture--big';} ?>">
+          <?php if('true' == $image_decorated):?>
+          <div class="before"></div>
+          <div class="after"></div>
+          <?php endif;?>
           <?php echo wp_get_attachment_image($image, 'large', '', ['class' => $image_class]); ?>
         </div>
       </div>

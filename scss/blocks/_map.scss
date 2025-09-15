@@ -1,6 +1,7 @@
 .map {
   width: 100%;
   position: relative;
+  margin: 0 0 -80px;
 
   &--background {
     background: $very-light-gray;
@@ -9,8 +10,8 @@
   &__content {
     height: 450px;
     width: 100%;
-    
-    @media(max-width: 767px) {
+
+    @media (max-width: 767px) {
       height: 300px !important;
     }
 

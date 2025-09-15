@@ -8,34 +8,29 @@
 
   &__image {
     width: 100%;
-    max-width: 350px;
-    height: 300px;
+    max-width: 335px;
+    height: 320px;
     flex-shrink: 0;
     position: relative;
     z-index: 3;
-    margin: 20px 0 0 20px;
+    margin: 3px 0 0;
+
+    @media (max-width: 767px) {
+      margin: 20px 0 0 0;
+    }
 
     img {
       position: relative;
       z-index: 2;
-      border: 3px solid $white;
+      border-radius: 18px;
+      filter: brightness(0.98);
+      object-position: top;
     }
-  }
-
-  &__image-decorator {
-    display: block;
-    content: '';
-    z-index: 1;
-    background: $theme-color;
-    width: 350px;
-    height: 300px;
-    position: absolute;
-    top: -20px;
-    left: -20px;
   }
 
   &__subtitle {
     margin: 20px 0 0;
+    @extend .paragraph;
   }
 
   &__details {
@@ -45,10 +40,12 @@
     align-items: flex-start;
     justify-content: flex-start;
     text-align: left;
+    max-width: 360px;
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
       align-items: center;
       justify-content: center;
+      max-width: 100%;
     }
 
     > p {
@@ -56,8 +53,8 @@
 
       span {
         font-weight: 600;
-        display: inline-block;
         position: relative;
+        display: inline-block;
 
         &::after {
           width: 100%;
@@ -66,20 +63,20 @@
           display: block;
           background: $theme-color;
           position: absolute;
-          bottom: -2px;
+          bottom: -3px;
           left: 0;
         }
       }
     }
   }
 
-  &__phone, &__email {
+  &__phone,
+  &__email {
     display: flex;
     @extend .paragraph;
     margin: 0;
     gap: 8px;
     color: $text-color;
-    font-weight: 500;
 
     &::before {
       content: '';
@@ -124,7 +121,7 @@
     p {
       margin: 0;
 
-      @media(max-width: 767px) {
+      @media (max-width: 767px) {
         text-align: center;
       }
     }
@@ -135,8 +132,9 @@
     padding: 50px;
     box-shadow: 0px 1px 20px 0px rgba(0, 0, 0, 0.1);
     background-color: $white;
+    border-radius: 20px;
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
       margin: 30px 0 0;
     }
 
@@ -168,11 +166,12 @@
             }
           }
 
-          p, label {
+          p,
+          label {
             margin: 0;
             font-size: 15px;
             color: $input-color;
-      
+
             a {
               color: $theme-color;
               text-decoration: underline;
@@ -194,11 +193,11 @@
 
       .gform_footer {
         margin: 15px 0 0 !important;
-        text-align: right; 
+        text-align: right;
         display: block !important;
-  
-        @media(max-width: 767px) {
-          text-align: center; 
+
+        @media (max-width: 767px) {
+          text-align: center;
           margin: 25px 0 0 !important;
         }
 

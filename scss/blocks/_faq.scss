@@ -18,24 +18,34 @@
   &__item {
     width: calc(50% - 15px);
     display: flex;
-    background: $very-light-gray;
-    box-shadow: 0px 0px 20px 0px rgba(222, 222, 222, 1);
-    padding: 30px 20px 25px;
+    padding: 25px;
+    background: $white;
+    box-shadow: 0px 3px 20px -1px rgba(0, 0, 0, 0.16);
+    border-radius: 20px;
     gap: 30px;
 
-    @media(max-width: 991px) {
+    @media (max-width: 991px) {
       width: 100%;
     }
   }
 
   &__number {
-    width: 50px;
-    min-height: 45px;
-    line-height: 1;
-    display: block;
-    flex-shrink: 0;
-    text-align: center;
     position: relative;
+    width: 55px;
+    height: 55px;
+    padding: 10px;
+    border-radius: 10px;
+    background: $gray;
+    z-index: 1;
+    transition: all 350ms ease;
+    padding: 10px;
+    flex-shrink: 0;
+
+    img {
+      transition: all 350ms ease;
+      filter: brightness(0) invert(1);
+      min-width: 30px;
+    }
   }
 
   &__content {
@@ -45,14 +55,12 @@
 
   &__question {
     width: 100%;
-    font-size: 18px;
-    font-family: $font-primary;
-    color: $dark;
+    @extend .h4;
     width: 100%;
     display: block;
     text-align: left;
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
       font-size: 14px;
     }
   }
@@ -60,8 +68,8 @@
   &__answer {
     p {
       text-align: left;
-      
-      @media(max-width: 767px) {
+
+      @media (max-width: 767px) {
         font-size: 14px;
       }
     }

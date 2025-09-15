@@ -98,6 +98,31 @@
             "save_other_choice": 0
         },
         {
+            "key": "field_68c855d548402",
+            "label": "Image decorated",
+            "name": "image_decorated",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "true": "true",
+                "false": "false"
+            },
+            "default_value": "false",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_624e00c2c232b",
             "label": "Button",
             "name": "button",
@@ -207,5 +232,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1757521062
+    "modified": 1757959660
 }

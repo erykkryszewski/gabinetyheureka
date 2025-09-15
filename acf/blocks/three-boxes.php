@@ -17,6 +17,9 @@ $boxes = get_field('boxes');
       <?php foreach ($boxes as $key => $item): ?>
       <div class="col-sm-6 col-lg-4">
         <div class="three-boxes__item">
+          <?php if (!empty($item['link'])): ?>
+          <a href="<?php echo esc_html($item['link']['url']); ?>" class="cover"></a>
+          <?php endif; ?>
           <div>
             <?php if (!empty($item['icon'])): ?>
             <div class="three-boxes__icon">
@@ -28,7 +31,7 @@ $boxes = get_field('boxes');
             <?php endif; ?>
           </div>
           <?php if (!empty($item['link'])): ?>
-          <a href="<?php echo esc_html($item['link']['url']); ?>" class="button button--small three-boxes__button"><?php echo esc_html($item['link']['title']);?></a>
+          <a href="<?php echo esc_html($item['link']['url']); ?>" class="arrow-link mt-25"><?php echo esc_html($item['link']['title']);?></a>
           <?php endif; ?>
         </div>
       </div>

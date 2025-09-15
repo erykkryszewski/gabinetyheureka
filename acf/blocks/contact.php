@@ -26,7 +26,7 @@ $global_opening_hours = get_field('global_opening_hours', 'options');
         <div class="contact__details">
           <?php if (!empty($image)): ?>
           <div class="contact__image">
-            <?php echo wp_get_attachment_image($image, 'full', '', ['class' => 'object-fit-cover']); ?>
+            <?php echo wp_get_attachment_image($image, 'large', '', ['class' => 'object-fit-cover']); ?>
             <div class="contact__image-decorator"></div>
           </div>
           <?php endif; ?>
@@ -34,8 +34,7 @@ $global_opening_hours = get_field('global_opening_hours', 'options');
           <?php echo apply_filters('acf_the_content', str_replace('&nbsp;', ' ', $text)); ?>
           <?php endif; ?>
           <?php if (!empty($global_phone_number)): ?>
-          <a class="contact__phone ercodingtheme-phone-number"
-            href="tel:<?php echo esc_html($global_phone_number); ?>">Tel:
+          <a class="contact__phone ercodingtheme-phone-number" href="tel:<?php echo esc_html($global_phone_number); ?>">Tel:
             <?php echo esc_html($global_phone_number); ?></a>
           <?php endif; ?>
           <?php if (!empty($global_email)): ?>

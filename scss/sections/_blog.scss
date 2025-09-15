@@ -63,10 +63,19 @@
     background: $very-light-gray;
     padding: 20px;
     border-radius: 17px;
+    position: relative;
 
     @media (max-width: 767px) {
       margin: 40px auto 0;
       height: auto;
+    }
+
+    &:hover {
+      a.arrow-link {
+        &::after {
+          right: -8px;
+        }
+      }
     }
   }
 
@@ -85,33 +94,10 @@
       height: 200px;
     }
 
-    &::before {
-      display: block;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      margin: 0;
-      background: $black;
-      opacity: 0;
-      z-index: 1;
-      cursor: pointer;
-      transition: all 350ms ease;
-      content: '';
-    }
-
-    &:hover {
-      &::before {
-        opacity: 0.2;
-      }
-    }
-
     img {
       transform-origin: center;
       border-radius: 17px;
-      filter: brightness(0.96) contrast(1.05);
+      filter: brightness(0.98) contrast(1.03);
     }
   }
 

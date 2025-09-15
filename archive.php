@@ -42,21 +42,22 @@ $query = new WP_Query($args);
     </div>
   </div>
   <?php if($query->have_posts()):?>
-    <div class="theme-blog theme-blog--courses">
-      <div class="container">
-        <div class="theme-blog__wrapper theme-blog__wrapper--courses">
-          <div class="row">
-            <?php while ($query->have_posts()) : $query->the_post(); ?>
-              <div class="col-12 col-md-6 col-lg-4 theme-blog__column theme-blog__column--courses">
-                <div class="theme-blog__item theme-blog__item--courses">
-                  <div class="theme-blog__image theme-blog__image--courses">
-                    <a href="<?php the_permalink();?>" class="cover"></a>
-                    <?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'full', '', ["class" => "object-fit-contain"]); ?>
-                  </div>
-                  <div class="theme-blog__content theme-blog__content--courses">
-                    <div>
-                      <a href="<?php the_permalink(); ?>" class="theme-blog__title"><?php the_title(); ?></a>
-                      <?php
+  <div class="theme-blog theme-blog--courses">
+    <div class="container">
+      <div class="theme-blog__wrapper theme-blog__wrapper--courses">
+        <div class="row">
+          <?php while ($query->have_posts()) : $query->the_post(); ?>
+          <div class="col-12 col-md-6 col-lg-4 theme-blog__column theme-blog__column--courses">
+            <div class="theme-blog__item theme-blog__item--courses">
+              <a href="<?php the_permalink(); ?>" class="cover"></a>
+              <div class="theme-blog__image theme-blog__image--courses">
+                <a href="<?php the_permalink();?>" class="cover"></a>
+                <?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'full', '', ["class" => "object-fit-contain"]); ?>
+              </div>
+              <div class="theme-blog__content theme-blog__content--courses">
+                <div>
+                  <a href="<?php the_permalink(); ?>" class="theme-blog__title"><?php the_title(); ?></a>
+                  <?php
                       $excerpt = get_the_excerpt();
                       $content = get_the_content();
 
@@ -68,16 +69,16 @@ $query = new WP_Query($args);
                       }
                       
                     ?>
-                    </div>
-                      <a href="<?php the_permalink(); ?>" class="theme-blog__button button"><?php _e('Czytaj więcej', 'ercodingtheme'); ?></a>
-                  </div>
                 </div>
+                <a href="<?php the_permalink(); ?>" class="theme-blog__button button"><?php _e('Czytaj więcej', 'ercodingtheme'); ?></a>
               </div>
-            <?php endwhile; ?>
+            </div>
           </div>
+          <?php endwhile; ?>
         </div>
-        <div class="pagination mt-5">
-          <?php
+      </div>
+      <div class="pagination mt-5">
+        <?php
             echo paginate_links(array(
               'base'         => str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))),
               'current'      => max(1, get_query_var('paged')),
@@ -94,10 +95,10 @@ $query = new WP_Query($args);
               'add_fragment' => '',
             ));
           ?>
-        </div>
-        <?php wp_reset_postdata(); ?>
       </div>
+      <?php wp_reset_postdata(); ?>
     </div>
+  </div>
   <?php endif;?>
   <div class="spacer spacer--small" style="height: 40px"></div>
   <div class="cta">

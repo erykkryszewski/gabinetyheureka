@@ -53,6 +53,7 @@ $global_logo = get_field('global_logo', 'options');
           <?php the_post(); ?>
           <div class="col-12 col-md-6 col-lg-4 theme-blog__column">
             <div class="theme-blog__item">
+              <a href="<?php the_permalink(); ?>" class="cover"></a>
               <div class="theme-blog__image">
                 <a href="<?php the_permalink(); ?>" class="cover"></a>
                 <?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'full', '', [
@@ -73,8 +74,7 @@ $global_logo = get_field('global_logo', 'options');
                     ?>
                   </p>
                 </div>
-                <a href="<?php the_permalink(); ?>"
-                  class="theme-blog__button button"><?php _e('Czytaj więcej', 'ercodingtheme'); ?></a>
+                <a href="<?php the_permalink(); ?>" class="theme-blog__button button"><?php _e('Czytaj więcej', 'ercodingtheme'); ?></a>
               </div>
             </div>
           </div>
