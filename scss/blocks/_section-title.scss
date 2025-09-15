@@ -8,6 +8,7 @@
 
   h2 {
     color: $text-color;
+    @extend .h1;
   }
 
   h3 {
@@ -19,7 +20,7 @@
     max-width: 1050px;
     text-align: left;
     font-size: 18px;
-    
+
     &:first-of-type {
       margin: 30px 0 0;
     }
@@ -43,10 +44,10 @@
         margin: 25px auto 0 !important;
       }
     }
-  
+
     &--decorated {
       padding: 0 0 0 30px;
-  
+
       &::after {
         content: '';
         display: block;

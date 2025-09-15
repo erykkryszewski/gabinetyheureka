@@ -4,10 +4,6 @@
   overflow: hidden;
   position: relative;
 
-  @media (max-width: 767px) {
-    padding: 0 15px;
-  }
-
   &--background {
     background: $very-light-gray;
   }
@@ -45,7 +41,7 @@
     }
 
     &--full-width {
-      height: 400px;
+      height: 380px;
     }
 
     @media (max-width: 1599px) {
@@ -58,6 +54,10 @@
 
     @media (max-width: 767px) {
       height: 200px;
+    }
+
+    @media (max-width: 467px) {
+      height: 170px;
     }
   }
 }

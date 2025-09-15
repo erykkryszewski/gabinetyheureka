@@ -18,7 +18,7 @@ $button_full_width = get_field('button_full_width');
   <?php endif; ?>
   <div class="container">
     <div class="row text-with-image__row <?php if ('reverse' == $direction) { echo 'text-with-image__row--reverse'; } ?>">
-      <div class="col-12 col-md-6">
+      <div class="col-12 col-lg-6">
         <?php if (!empty($content)): ?>
         <div class="text-with-image__content">
           <?php echo apply_filters('the_title', $content); ?>
@@ -29,8 +29,8 @@ $button_full_width = get_field('button_full_width');
         <?php endif; ?>
       </div>
       <?php if (!empty($image)): ?>
-      <div class="col-12 col-md-6">
-        <div class="text-with-image__picture <?php if ('reverse' == $direction) { echo 'text-with-image__picture--reverse';} ?> <?php if ('big' == $image_size) { echo 'text-with-image__picture--big';} ?>">
+      <div class="col-12 col-lg-6">
+        <div class="text-with-image__picture <?php if ('reverse' == $direction) { echo 'text-with-image__picture--reverse';} ?> <?php if ('big' == $image_size) { echo 'text-with-image__picture--big';} ?> <?php if ('small' == $image_size) { echo 'text-with-image__picture--small';} ?>">
           <?php if('true' == $image_decorated):?>
           <div class="before"></div>
           <div class="after"></div>

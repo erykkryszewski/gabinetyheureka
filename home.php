@@ -29,17 +29,14 @@ $global_logo = get_field('global_logo', 'options');
     <div class="subpage-hero__background subpage-hero__background--plain"></div>
     <div class="container">
       <div class="subpage-hero__wrapper">
-        <h1 class="subpage-hero__title"><?php echo apply_filters('the_title', 'Blog'); ?></h1>
+        <h1 class="subpage-hero__title"><?php echo apply_filters('the_title', 'Porady'); ?></h1>
       </div>
     </div>
   </div>
-  <div class="spacer" style="height: 90px"></div>
-  <div class="section-title">
+  <div class="decorated-text ">
     <div class="container">
-      <div class="section-title__wrapper section-title__wrapper--decorated">
-        <h2>Lorem ipsum</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem repellendus nemo vero inventore ipsam est
-          distinctio ullam perspiciatis veniam facilis?</p>
+      <div class="decorated-text__wrapper">
+        <h2 class="decorated-text__title">W tej sekcji znajdziesz praktyczne wskazówki i inspiracje przygotowane przez naszych specjalistów. To krótkie, konkretne treści, które pomogą Ci lepiej zrozumieć potrzeby dziecka i wspierać je na co dzień. Regularnie publikujemy tu także nowe artykuły, aby dostarczać rodzicom aktualnej wiedzy i sprawdzonych rozwiązań.</h2>
       </div>
     </div>
   </div>
@@ -51,7 +48,7 @@ $global_logo = get_field('global_logo', 'options');
         <div class="row">
           <?php while (have_posts()): ?>
           <?php the_post(); ?>
-          <div class="col-12 col-md-6 col-lg-4 theme-blog__column">
+          <div class="col-12 col-md-6 col-lg-3 theme-blog__column">
             <div class="theme-blog__item">
               <a href="<?php the_permalink(); ?>" class="cover"></a>
               <div class="theme-blog__image">
@@ -102,14 +99,13 @@ $global_logo = get_field('global_logo', 'options');
     </div>
   </div>
   <?php endif; ?>
-  <div class="spacer spacer--small" style="height: 40px"></div>
-  <div class="cta">
+  <div class="cta cta--subpage">
     <div class="container">
       <div class="cta__wrapper">
-        <h2 class="cta__title">Zapoznaj się z naszą ofertą!</h2>
-        <p></p>
+        <h2 class="cta__title">Umów się na terapię już dziś!</h2>
+        <p>Pozwól swojemu dziecku rozwijać się w bezpiecznej i przyjaznej atmosferze. Skontaktuj się z nami, aby wspólnie wybrać najlepszą formę wsparcia.</p>
         <div>
-          <a href="/kontakt/" class="cta__button button">Skontaktuj się</a>
+          <a href="/specjalisci/" class="cta__button button">Zarezerwuj wizytę u specjalisty</a>
         </div>
       </div>
     </div>
