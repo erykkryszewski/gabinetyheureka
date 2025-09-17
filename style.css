@@ -8259,3 +8259,18 @@ body.admin-bar .header--fixed {
   text-decoration: underline;
   color: #333333;
 }
+
+.specialists {
+  position: relative;
+  width: 100%;
+  margin: 50px 0 0;
+}
+
+.specialists__wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.specialists__filtration {
+  margin: 0;
+}
