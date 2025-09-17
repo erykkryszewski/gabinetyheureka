@@ -1326,7 +1326,7 @@
 
 .editor-styles-wrapper .default-block.container .wp-block-heading,
 .editor-styles-wrapper .default-block.container .wp-block-list {
-  margin: 25px 0 0;
+  margin: 20px 0 0;
 }
 
 .editor-styles-wrapper body.page .display-none,
@@ -1560,7 +1560,7 @@
 
 .editor-styles-wrapper p > strong,
 .editor-styles-wrapper .paragraph > strong {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 17px;
   line-height: 1.35;
   color: #333333;

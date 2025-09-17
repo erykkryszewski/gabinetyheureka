@@ -33,7 +33,7 @@
     border-radius: $theme-border-radius;
     position: relative;
 
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
       padding: 25px;
       max-height: 450px;
       max-width: 100%;
@@ -51,7 +51,6 @@
   }
 
   &__title {
-
     &--shop {
       color: $theme-color2;
     }
@@ -79,7 +78,7 @@
 
       span {
         display: block;
-        font-weight: 700;
+        font-weight: 600;
       }
     }
   }

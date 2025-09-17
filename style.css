@@ -2145,6 +2145,7 @@ h2,
 .h2,
 .text-image-decorated__content p,
 .thank-you__title,
+.specialist__name,
 h2 > strong,
 h2 > b,
 h2 > span {
@@ -2160,6 +2161,7 @@ h2 > span {
   .h2,
   .text-image-decorated__content p,
   .thank-you__title,
+  .specialist__name,
   h2 > strong,
   h2 > b,
   h2 > span {
@@ -2181,6 +2183,7 @@ h3,
 .three-boxes__content h4,
 .three-boxes__content h5,
 .theme-blog__title,
+.specialist__title,
 h3 > strong,
 h3 > b,
 h3 > span {
@@ -2206,6 +2209,7 @@ h3 > span {
   .three-boxes__content h4,
   .three-boxes__content h5,
   .theme-blog__title,
+  .specialist__title,
   h3 > strong,
   h3 > b,
   h3 > span {
@@ -2268,7 +2272,8 @@ p,
 .wyswig-content__wrapper ul li,
 .wyswig-content__wrapper ol li,
 .single-blog-post__content ul li,
-.single-blog-post__content ol li {
+.single-blog-post__content ol li,
+.specialist__info {
   font-size: 17px;
   line-height: 1.35;
   font-weight: 400;
@@ -2287,7 +2292,8 @@ p > a,
 .wyswig-content__wrapper ul li > a,
 .wyswig-content__wrapper ol li > a,
 .single-blog-post__content ul li > a,
-.single-blog-post__content ol li > a {
+.single-blog-post__content ol li > a,
+.specialist__info > a {
   font-weight: 400;
   font-size: 17px;
   line-height: 1.35;
@@ -2307,7 +2313,8 @@ p > a:hover,
 .wyswig-content__wrapper ul li > a:hover,
 .wyswig-content__wrapper ol li > a:hover,
 .single-blog-post__content ul li > a:hover,
-.single-blog-post__content ol li > a:hover {
+.single-blog-post__content ol li > a:hover,
+.specialist__info > a:hover {
   text-decoration: underline;
   color: #333333;
 }
@@ -2323,8 +2330,9 @@ p > strong,
 .wyswig-content__wrapper ul li > strong,
 .wyswig-content__wrapper ol li > strong,
 .single-blog-post__content ul li > strong,
-.single-blog-post__content ol li > strong {
-  font-weight: 600;
+.single-blog-post__content ol li > strong,
+.specialist__info > strong {
+  font-weight: 500;
   font-size: 17px;
   line-height: 1.35;
   color: #333333;
@@ -2341,7 +2349,8 @@ p > span,
 .wyswig-content__wrapper ul li > span,
 .wyswig-content__wrapper ol li > span,
 .single-blog-post__content ul li > span,
-.single-blog-post__content ol li > span {
+.single-blog-post__content ol li > span,
+.specialist__info > span {
   font-size: 17px;
   line-height: 1.35;
   font-weight: 400;
@@ -2359,7 +2368,8 @@ p.small,
 .wyswig-content__wrapper ul li.small,
 .wyswig-content__wrapper ol li.small,
 .single-blog-post__content ul li.small,
-.single-blog-post__content ol li.small {
+.single-blog-post__content ol li.small,
+.small.specialist__info {
   font-size: 15px;
   line-height: 1.4;
 }
@@ -2500,7 +2510,7 @@ svg {
 
 .default-block.container .wp-block-heading,
 .default-block.container .wp-block-list {
-  margin: 25px 0 0;
+  margin: 20px 0 0;
 }
 
 body.page .display-none,
@@ -3987,7 +3997,7 @@ html::-webkit-scrollbar-thumb {
 
 .popup__content p span {
   display: block;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .arrow-link {
@@ -5140,8 +5150,8 @@ html::-webkit-scrollbar-thumb {
   display: flex;
   padding: 25px;
   background: #ffffff;
-  -webkit-box-shadow: 0px 3px 20px -1px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 3px 20px -1px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 3px 20px -1px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 20px -1px rgba(0, 0, 0, 0.12);
   border-radius: 20px;
   gap: 30px;
 }
@@ -5783,7 +5793,7 @@ html::-webkit-scrollbar-thumb {
 
 .motto-bar__content p {
   margin: 0;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -6182,7 +6192,7 @@ html::-webkit-scrollbar-thumb {
 }
 
 .program__subtitle {
-  font-weight: 700;
+  font-weight: 600;
   display: block;
 }
 
@@ -7068,8 +7078,8 @@ html::-webkit-scrollbar-thumb {
   position: relative;
   padding: 25px;
   background: #ffffff;
-  -webkit-box-shadow: 0px 3px 20px -1px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 3px 20px -1px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 3px 20px -1px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 20px -1px rgba(0, 0, 0, 0.12);
   border-radius: 20px;
   margin: 30px 0 0;
   display: -webkit-box;
@@ -8056,10 +8066,11 @@ body.admin-bar .header--fixed {
   width: 100%;
   height: calc(100% - 30px);
   margin: 30px 0 0;
-  background: #f5f5f5;
   padding: 20px;
   border-radius: 17px;
   position: relative;
+  -webkit-box-shadow: 0px 3px 20px -1px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 20px -1px rgba(0, 0, 0, 0.12);
 }
 
 @media (max-width: 767px) {
@@ -8306,8 +8317,22 @@ body.admin-bar .header--fixed {
   margin: 30px 0px 0px;
 }
 
+.specialist strong {
+  font-weight: 600;
+}
+
+.specialist--single {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  height: auto;
+  padding: 0;
+  background: transparent;
+  border-radius: none;
+  margin: 0;
+}
+
 .specialist__image {
-  height: 300px;
+  height: 330px;
   width: 100%;
   border-radius: 18px;
 }
@@ -8318,8 +8343,16 @@ body.admin-bar .header--fixed {
      object-position: top;
 }
 
+.specialist__image--single {
+  height: 400px;
+}
+
 .specialist__title {
   margin: 21px 0 12px;
+}
+
+.specialist__name {
+  margin: 0 0 19px;
 }
 
 .specialist__skills {
@@ -8342,8 +8375,30 @@ body.admin-bar .header--fixed {
   text-align: center;
 }
 
-.specialist p {
+.specialist__content p {
   font-size: 15px;
   line-height: 1.4;
   margin: 15px 0 0;
+}
+
+.specialist__info {
+  display: block;
+  margin: 5px 0 0;
+}
+
+.specialist__plan4u {
+  width: 100%;
+  height: 255px;
+  background: #f5f5f5;
+  margin: 35px 0 0;
+  max-width: 313px;
+  border-radius: 15px;
+}
+
+.specialist__description {
+  margin: 25px 0 0;
+}
+
+.specialist:hover a.arrow-link::after {
+  right: -8px;
 }

@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
   gsap.registerPlugin(ScrollTrigger);
 
   const sections = document.querySelectorAll(
-    'main#main > div:not(.default-block.container-fluid):not(.subpage-hero):not(.map):not(.services)',
+    'main#main > div:not(.default-block.container-fluid):not(.subpage-hero):not(.map):not(.services):not(.specialist):not(.faq)',
   );
 
   const viewportHeight = window.innerHeight;
@@ -35,14 +35,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const isInitialVisible = rect.top < viewportHeight * 0.9;
     let delayValue = 0;
     if (isInitialVisible) {
-      delayValue = initialBatchIndex * 0.1;
+      delayValue = initialBatchIndex * 0.13;
       initialBatchIndex = initialBatchIndex + 1;
     }
 
     gsap.from(sectionElement, {
       y: 20,
       autoAlpha: 0,
-      duration: 0.7,
+      duration: 0.45,
       ease: 'power2.out',
       delay: delayValue,
       scrollTrigger: {

@@ -89,13 +89,14 @@ if ($is_specialist_query || strpos($url, '_sf') !== false) {
                 $content = get_the_content();
 
                 if (!empty($excerpt)) {
-                  echo '<p>' . mb_substr($excerpt, 0, 150) . (mb_strlen($excerpt) > 150 ? '...' : '') . '</p>';
+                  echo '<p>' . mb_substr($excerpt, 0, 120) . (mb_strlen($excerpt) > 120 ? '...' : '') . '</p>';
                 } elseif (empty($excerpt) && !empty($content)) {
                   $contentText = strip_tags($content);
-                  echo '<p>' . mb_substr($contentText, 0, 150) . (mb_strlen($contentText) > 150 ? '...' : '') . '</p>';
+                  echo '<p>' . mb_substr($contentText, 0, 120) . (mb_strlen($contentText) > 120 ? '...' : '') . '</p>';
                 }
                 ?>
               </div>
+              <a href="<?php the_permalink(); ?>" class="arrow-link mt-3">Zobacz profil</a>
             </div>
           </div>
           <?php endwhile; ?>
