@@ -62,17 +62,28 @@ if ($is_specialist_query || strpos($url, '_sf') !== false) {
           <div class="col-12 col-md-6 <?php if ($is_specialist_query) {
             echo 'col-lg-4';
           } ?>">
-            <div class="team__item">
+            <div class="specialist">
               <a href="<?php the_permalink(); ?>" class="cover"></a>
               <?php if (!empty(get_post_thumbnail_id())): ?>
-              <div class="team__image">
-                <?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'team-image', '', [
+              <div class="specialist__image">
+                <?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'specialist-image', '', [
                   'class' => 'object-fit-cover',
                 ]); ?>
               </div>
               <?php endif; ?>
-              <div class="team__content">
-                <h3 class="team__title"><?php the_title(); ?></h3>
+              <div class="specialist__content">
+                <h3 class="specialist__title"><?php the_title(); ?></h3>
+                <div class="specialist__skills">
+                  <?php
+                    $terms = get_the_terms($post->ID, 'terapia');
+                    if ($terms && !is_wp_error($terms)) {
+                      foreach ($terms as $term) {
+                        echo '<div class="specialist__skill">' . esc_html($term->name) . '</div>';
+                      }
+                    }
+                  ?>
+                </div>
+
                 <?php
                 $excerpt = get_the_excerpt();
                 $content = get_the_content();

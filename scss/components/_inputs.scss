@@ -4,7 +4,7 @@
   font-size: 15px !important;
   color: $input-color !important;
   display: block;
-  border-radius: $theme-border-radius !important;
+  border-radius: 17px !important;
   font-weight: 400 !important;
   width: 100%;
 
@@ -16,6 +16,12 @@
   }
 }
 
-input[type="text"], input[type="number"], input[type="email"], input[type="password"], input[type="tel"], select, textarea {
+input[type='text'],
+input[type='number'],
+input[type='email'],
+input[type='password'],
+input[type='tel'],
+select,
+textarea {
   @extend .inputs;
 }

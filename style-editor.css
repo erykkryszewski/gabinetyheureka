@@ -1181,7 +1181,7 @@
 }
 
 .editor-styles-wrapper .button--inactive {
-  background: #cecece;
+  background: #e0e0e0;
   border: 1px solid #f5f5f5;
   color: #666666;
   pointer-events: none;
@@ -1189,7 +1189,7 @@
 }
 
 .editor-styles-wrapper .button--inactive:hover {
-  background: #cecece;
+  background: #e0e0e0;
   border: 1px solid #f5f5f5;
   color: #666666;
 }
