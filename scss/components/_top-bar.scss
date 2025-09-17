@@ -65,7 +65,7 @@
       width: 18px;
       height: 18px;
       background: url('./images/phone-icon.svg') center/contain no-repeat;
-      filter: brightness(0);
+      filter: brightness(0) invert(0.3);
     }
   }
 
@@ -74,7 +74,7 @@
       width: 18px;
       height: 18px;
       background: url('./images/email-icon.svg') center/contain no-repeat;
-      filter: brightness(0);
+      filter: brightness(0) invert(0.3);
     }
   }
 
@@ -84,7 +84,7 @@
     a {
       max-width: 25px;
       height: 25px;
-      filter: brightness(0);
+      filter: brightness(0) invert(0.3);
     }
   }
 }

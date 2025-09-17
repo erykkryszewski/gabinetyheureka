@@ -20,7 +20,7 @@ $button_full_width = get_field('button_full_width');
     <div class="row text-with-image__row <?php if ('reverse' == $direction) { echo 'text-with-image__row--reverse'; } ?>">
       <div class="col-12 col-lg-6">
         <?php if (!empty($content)): ?>
-        <div class="text-with-image__content">
+        <div class="text-with-image__content <?php if(!is_front_page()) { echo 'text-with-image__content--subpage'; }?>">
           <?php echo apply_filters('the_title', $content); ?>
         </div>
         <?php endif; ?>

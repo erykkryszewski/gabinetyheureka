@@ -128,7 +128,62 @@
       font-size: 19px;
 
       strong {
-        font-size: 19px;
+        @extend .h4;
+      }
+    }
+
+    ul,
+    ol {
+      margin: 20px 0 0;
+
+      li {
+        @extend .paragraph;
+        margin: 0;
+        display: block;
+        padding: 0 0 0 18px;
+        position: relative;
+
+        &::before {
+          display: block;
+          margin: 0;
+          position: absolute;
+          left: 0;
+          color: $theme-color;
+        }
+
+        strong {
+          width: auto;
+        }
+      }
+    }
+
+    ul {
+      li {
+        &::before {
+          content: '•';
+          font-size: 23px;
+          top: -4px;
+        }
+      }
+    }
+
+    ol {
+      counter-reset: li-counter;
+      li {
+        counter-increment: li-counter;
+
+        &::before {
+          content: counter(li-counter) '.';
+        }
+      }
+    }
+
+    &--subpage {
+      p,
+      p *,
+      li,
+      li * {
+        font-size: 15px !important;
       }
     }
   }

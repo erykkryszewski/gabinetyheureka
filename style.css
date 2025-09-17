@@ -2225,6 +2225,7 @@ h4,
 .counter__content p span .counter__item::after,
 .counter__item::after,
 .faq__question,
+.text-with-image__content p strong,
 .text-with-image__subtitle,
 .footer__column h1,
 .footer__column h2,
@@ -2235,7 +2236,7 @@ h4 > b,
 h4 > span {
   color: #333333;
   font-family: "Roboto Flex", sans-serif;
-  font-size: 19px;
+  font-size: 20px;
   line-height: 1.1;
   font-weight: 500;
 }
@@ -2249,6 +2250,7 @@ h4 > span {
   .counter__content p span .counter__item::after,
   .counter__item::after,
   .faq__question,
+  .text-with-image__content p strong,
   .text-with-image__subtitle,
   .footer__column h1,
   .footer__column h2,
@@ -2268,6 +2270,8 @@ p,
 .contact__email,
 .contact__form .gform_confirmation_message,
 .text-image-decorated__author,
+.text-with-image__content ul li,
+.text-with-image__content ol li,
 .theme-form__form .gform_confirmation_message,
 .wyswig-content__wrapper ul li,
 .wyswig-content__wrapper ol li,
@@ -2288,6 +2292,8 @@ p > a,
 .contact__email > a,
 .contact__form .gform_confirmation_message > a,
 .text-image-decorated__author > a,
+.text-with-image__content ul li > a,
+.text-with-image__content ol li > a,
 .theme-form__form .gform_confirmation_message > a,
 .wyswig-content__wrapper ul li > a,
 .wyswig-content__wrapper ol li > a,
@@ -2309,6 +2315,8 @@ p > a:hover,
 .contact__email > a:hover,
 .contact__form .gform_confirmation_message > a:hover,
 .text-image-decorated__author > a:hover,
+.text-with-image__content ul li > a:hover,
+.text-with-image__content ol li > a:hover,
 .theme-form__form .gform_confirmation_message > a:hover,
 .wyswig-content__wrapper ul li > a:hover,
 .wyswig-content__wrapper ol li > a:hover,
@@ -2326,6 +2334,8 @@ p > strong,
 .contact__email > strong,
 .contact__form .gform_confirmation_message > strong,
 .text-image-decorated__author > strong,
+.text-with-image__content ul li > strong,
+.text-with-image__content ol li > strong,
 .theme-form__form .gform_confirmation_message > strong,
 .wyswig-content__wrapper ul li > strong,
 .wyswig-content__wrapper ol li > strong,
@@ -2345,6 +2355,8 @@ p > span,
 .contact__email > span,
 .contact__form .gform_confirmation_message > span,
 .text-image-decorated__author > span,
+.text-with-image__content ul li > span,
+.text-with-image__content ol li > span,
 .theme-form__form .gform_confirmation_message > span,
 .wyswig-content__wrapper ul li > span,
 .wyswig-content__wrapper ol li > span,
@@ -2364,6 +2376,8 @@ p.small,
 .small.contact__email,
 .contact__form .small.gform_confirmation_message,
 .small.text-image-decorated__author,
+.text-with-image__content ul li.small,
+.text-with-image__content ol li.small,
 .theme-form__form .small.gform_confirmation_message,
 .wyswig-content__wrapper ul li.small,
 .wyswig-content__wrapper ol li.small,
@@ -3175,8 +3189,8 @@ textarea::placeholder {
 }
 
 .social-media a img {
-  -webkit-filter: brightness(0.15);
-          filter: brightness(0.15);
+  -webkit-filter: brightness(0) invert(0.3);
+          filter: brightness(0) invert(0.3);
 }
 
 .section-id {
@@ -3749,16 +3763,16 @@ html::-webkit-scrollbar-thumb {
   width: 18px;
   height: 18px;
   background: url("./images/phone-icon.svg") center/contain no-repeat;
-  -webkit-filter: brightness(0);
-          filter: brightness(0);
+  -webkit-filter: brightness(0) invert(0.3);
+          filter: brightness(0) invert(0.3);
 }
 
 .top-bar__email::before {
   width: 18px;
   height: 18px;
   background: url("./images/email-icon.svg") center/contain no-repeat;
-  -webkit-filter: brightness(0);
-          filter: brightness(0);
+  -webkit-filter: brightness(0) invert(0.3);
+          filter: brightness(0) invert(0.3);
 }
 
 .top-bar__social-media {
@@ -3768,8 +3782,8 @@ html::-webkit-scrollbar-thumb {
 .top-bar__social-media a {
   max-width: 25px;
   height: 25px;
-  -webkit-filter: brightness(0);
-          filter: brightness(0);
+  -webkit-filter: brightness(0) invert(0.3);
+          filter: brightness(0) invert(0.3);
 }
 
 .bottom-bar {
@@ -4213,6 +4227,7 @@ html::-webkit-scrollbar-thumb {
 
 .contact__subtitle {
   margin: 20px 0 0;
+  font-size: 15px;
 }
 
 .contact__details {
@@ -4271,6 +4286,7 @@ html::-webkit-scrollbar-thumb {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-size: 15px;
   margin: 0;
   gap: 8px;
   color: #333333;
@@ -4279,10 +4295,10 @@ html::-webkit-scrollbar-thumb {
 .contact__phone::before, .contact__email::before {
   content: '';
   display: block;
-  -webkit-filter: brightness(0.2);
-          filter: brightness(0.2);
+  -webkit-filter: brightness(0) invert(0.3);
+          filter: brightness(0) invert(0.3);
   position: relative;
-  bottom: -2px;
+  bottom: 0px;
 }
 
 .contact__phone:hover, .contact__email:hover {
@@ -4405,6 +4421,10 @@ html::-webkit-scrollbar-thumb {
 
 .contact__form form .gform_footer input {
   border-radius: 20px !important;
+}
+
+.contact__form .gform_confirmation_message {
+  font-size: 15px;
 }
 
 .counter {
@@ -5153,7 +5173,7 @@ html::-webkit-scrollbar-thumb {
   -webkit-box-shadow: 0px 3px 20px -1px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 20px -1px rgba(0, 0, 0, 0.12);
   border-radius: 20px;
-  gap: 30px;
+  gap: 15px;
 }
 
 @media (max-width: 991px) {
@@ -5205,12 +5225,7 @@ html::-webkit-scrollbar-thumb {
 
 .faq__answer p {
   text-align: left;
-}
-
-@media (max-width: 767px) {
-  .faq__answer p {
-    font-size: 14px;
-  }
+  font-size: 15px;
 }
 
 .gallery {
@@ -7016,8 +7031,56 @@ html::-webkit-scrollbar-thumb {
   font-size: 19px;
 }
 
-.text-with-image__content p strong {
-  font-size: 19px;
+.text-with-image__content ul,
+.text-with-image__content ol {
+  margin: 20px 0 0;
+}
+
+.text-with-image__content ul li,
+.text-with-image__content ol li {
+  margin: 0;
+  display: block;
+  padding: 0 0 0 18px;
+  position: relative;
+}
+
+.text-with-image__content ul li::before,
+.text-with-image__content ol li::before {
+  display: block;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  color: #b22f89;
+}
+
+.text-with-image__content ul li strong,
+.text-with-image__content ol li strong {
+  width: auto;
+}
+
+.text-with-image__content ul li::before {
+  content: '•';
+  font-size: 23px;
+  top: -4px;
+}
+
+.text-with-image__content ol {
+  counter-reset: li-counter;
+}
+
+.text-with-image__content ol li {
+  counter-increment: li-counter;
+}
+
+.text-with-image__content ol li::before {
+  content: counter(li-counter) ".";
+}
+
+.text-with-image__content--subpage p,
+.text-with-image__content--subpage p *,
+.text-with-image__content--subpage li,
+.text-with-image__content--subpage li * {
+  font-size: 15px !important;
 }
 
 .text-with-image__title {
@@ -8071,6 +8134,19 @@ body.admin-bar .header--fixed {
   position: relative;
   -webkit-box-shadow: 0px 3px 20px -1px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 20px -1px rgba(0, 0, 0, 0.12);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 @media (max-width: 767px) {
@@ -8129,6 +8205,10 @@ body.admin-bar .header--fixed {
   .theme-blog__content {
     height: auto;
   }
+}
+
+.theme-blog__content p {
+  font-size: 15px;
 }
 
 .theme-blog__title {

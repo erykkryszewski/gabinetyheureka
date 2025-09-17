@@ -3,8 +3,8 @@
   gap: 10px;
   align-items: center;
   margin: 20px 0 20px;
-  
-  @media(max-width: 767px) {
+
+  @media (max-width: 767px) {
     justify-content: center;
   }
 
@@ -17,7 +17,7 @@
     height: 25px;
 
     img {
-      filter: brightness(0.15);
+      filter: brightness(0) invert(0.3);
     }
   }
 }

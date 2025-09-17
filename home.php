@@ -51,28 +51,30 @@ $global_logo = get_field('global_logo', 'options');
           <div class="col-12 col-md-6 col-lg-3 theme-blog__column">
             <div class="theme-blog__item">
               <a href="<?php the_permalink(); ?>" class="cover"></a>
-              <div class="theme-blog__image">
-                <a href="<?php the_permalink(); ?>" class="cover"></a>
-                <?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'full', '', [
-                  'class' => 'object-fit-cover',
-                ]); ?>
-              </div>
-              <div class="theme-blog__content">
-                <div>
-                  <a href="<?php the_permalink(); ?>" class="theme-blog__title"><?php the_title(); ?></a>
-                  <p>
-                    <?php
-                    $excerpt = get_the_excerpt();
-                    if (empty($excerpt)) {
-                      echo substr(get_content_excerpt(), 0, 150) . '...';
-                    } else {
-                      echo substr($excerpt, 0, 150) . '...';
-                    }
-                    ?>
-                  </p>
+              <div>
+                <div class="theme-blog__image">
+                  <a href="<?php the_permalink(); ?>" class="cover"></a>
+                  <?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'full', '', [
+                    'class' => 'object-fit-cover',
+                  ]); ?>
                 </div>
-                <a href="<?php the_permalink(); ?>" class="theme-blog__button button"><?php _e('Czytaj więcej', 'ercodingtheme'); ?></a>
+                <div class="theme-blog__content">
+                  <div>
+                    <a href="<?php the_permalink(); ?>" class="theme-blog__title"><?php the_title(); ?></a>
+                    <p>
+                      <?php
+                      $excerpt = get_the_excerpt();
+                      if (empty($excerpt)) {
+                        echo substr(get_content_excerpt(), 0, 150) . '...';
+                      } else {
+                        echo substr($excerpt, 0, 150) . '...';
+                      }
+                      ?>
+                    </p>
+                  </div>
+                </div>
               </div>
+              <a href="<?php the_permalink(); ?>" class="theme-blog__button button"><?php _e('Czytaj więcej', 'ercodingtheme'); ?></a>
             </div>
           </div>
           <?php endwhile; ?>

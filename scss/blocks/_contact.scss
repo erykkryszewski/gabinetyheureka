@@ -31,6 +31,7 @@
   &__subtitle {
     margin: 20px 0 0;
     @extend .paragraph;
+    font-size: 15px;
   }
 
   &__details {
@@ -74,6 +75,7 @@
   &__email {
     display: flex;
     @extend .paragraph;
+    font-size: 15px;
     margin: 0;
     gap: 8px;
     color: $text-color;
@@ -81,9 +83,9 @@
     &::before {
       content: '';
       display: block;
-      filter: brightness(0.2);
+      filter: brightness(0) invert(0.3);
       position: relative;
-      bottom: -2px;
+      bottom: 0px;
     }
 
     &:hover {
@@ -209,6 +211,7 @@
 
     .gform_confirmation_message {
       @extend .paragraph;
+      font-size: 15px;
     }
   }
 }
