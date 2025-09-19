@@ -256,3 +256,15 @@ add_filter('pre_site_transient_update_themes', '__return_null');
 add_action('admin_footer-index.php', function () {
   echo '<style>#dashboard-widgets-wrap,#welcome-panel,.notice,.update-nag,#screen-meta,#screen-meta-links{display:none!important}.erc-msg{margin:10px 0 0;text-align:left;font-size:17px;font-weight:400}</style><script>document.addEventListener("DOMContentLoaded",function(){var h=document.querySelector(".wrap h1");if(h){var d=document.createElement("div");d.className="erc-msg";d.textContent="Finally there is no mess here 😊";h.insertAdjacentElement("afterend",d);}});</script>';
 });
+
+
+add_action('wp_head', function () {
+    if (!is_user_logged_in()) {
+        echo '<style>
+            .specialists,
+            .contact__image {
+                display: none !important;
+            }
+        </style>';
+    }
+});

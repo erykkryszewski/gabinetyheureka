@@ -46,6 +46,14 @@ if ($is_specialist_query || strpos($url, '_sf') !== false) {
       </div>
     </div>
   </div>
+  <div class="spacer" style="height:100px;"></div>
+  <div class="section-title " id="section-">
+    <div class="container">
+    <div class="section-title__wrapper section-title__wrapper--centered">
+            <h3>Już niedługo znajdziesz tutaj naszych specjalistów</h3>
+                      </div>
+  </div>
+</div>
 
   <div class="specialists">
     <div class="container">
