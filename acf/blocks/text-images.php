@@ -45,19 +45,19 @@ $top_image = get_field('top_image');
         <div class="text-images__pictures-wrapper">
           <?php if (!empty($left_image)): ?>
           <div class="text-images__left-picture">
-            <?php echo wp_get_attachment_image($left_image, 'text-images-left', '', ['class' => 'object-fit-cover']); ?>
+            <?php echo wp_get_attachment_image($left_image, 'large', '', ['class' => 'object-fit-cover']); ?>
           </div>
           <?php endif; ?>
           <?php if (!empty($right_image)): ?>
           <div class="text-images__right-picture">
-            <?php echo wp_get_attachment_image($right_image, 'text-images-right', '', [
+            <?php echo wp_get_attachment_image($right_image, 'large', '', [
               'class' => 'object-fit-cover',
             ]); ?>
           </div>
           <?php endif; ?>
           <?php if (!empty($top_image)): ?>
           <div class="text-images__top-picture">
-            <?php echo wp_get_attachment_image($top_image, 'text-images-top', '', ['class' => 'object-fit-cover']); ?>
+            <?php echo wp_get_attachment_image($top_image, 'large', '', ['class' => 'object-fit-cover']); ?>
           </div>
           <?php endif; ?>
         </div>

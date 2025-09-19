@@ -12,7 +12,7 @@ $button = get_field('button');
 $button_full_width = get_field('button_full_width');
 ?>
 
-<div class="text-with-image <?php if ('true' == $background) { echo 'text-with-image--background'; } ?>">
+<div class="text-with-image <?php if ('true' == $background) { echo 'text-with-image--background'; } ?> <?php if(is_front_page()) { echo 'text-with-image__content--homepage'; }?>">
   <?php if (!empty($section_id)): ?>
   <div class="section-id" id="<?php echo esc_html($section_id); ?>"></div>
   <?php endif; ?>

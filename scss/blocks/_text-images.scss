@@ -6,6 +6,7 @@
     height: 100%;
     width: 100%;
     position: absolute;
+    display: none;
 
     svg {
       width: 100%;
@@ -32,6 +33,7 @@
 
     p {
       max-width: 550px;
+      font-size: 15px;
     }
   }
 
@@ -57,6 +59,7 @@
 
     img {
       object-position: center top;
+      border-radius: 20px;
     }
 
     @media(max-width: 1199px) {
@@ -83,6 +86,11 @@
     
     @media(max-width: 499px) {
       height: 300px;
+    }
+
+    img {
+      object-position: center top;
+      border-radius: 20px;
     }
   }
 

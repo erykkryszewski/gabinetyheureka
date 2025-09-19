@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
   gsap.registerPlugin(ScrollTrigger);
 
   const sections = document.querySelectorAll(
-    'main#main > div:not(.default-block):not(.subpage-hero):not(.map):not(.services):not(.specialist):not(.faq):not(.text-with-image):not(.section-title):not(.theme-form)',
+    'main#main > div:not(.default-block):not(.subpage-hero):not(.map):not(.services):not(.specialist)',
   );
 
   const viewportHeight = window.innerHeight;

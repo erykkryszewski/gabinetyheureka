@@ -10,6 +10,11 @@
 
   &--background {
     background: $very-light-gray;
+    padding: 90px 0;
+
+    @media(max-width: 991px) {
+      padding: 45px 0;
+    }
   }
 
   &--padding {

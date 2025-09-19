@@ -814,7 +814,7 @@
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 1260px;
+    max-width: 1230px;
   }
   .col-xl {
     -ms-flex-preferred-size: 0;
