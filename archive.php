@@ -104,10 +104,10 @@ $global_logo = get_field('global_logo', 'options');
   <div class="cta cta--subpage">
     <div class="container">
       <div class="cta__wrapper">
-        <h2 class="cta__title">Umów się na terapię już dziś!</h2>
-        <p>Pozwól swojemu dziecku rozwijać się w bezpiecznej i przyjaznej atmosferze. Skontaktuj się z nami, aby wspólnie wybrać najlepszą formę wsparcia.</p>
+        <h2 class="cta__title">Umów swoje dziecko na terapię już dzisiaj</h2>
+        <h3 class="cta__subtitle">Zapoznaj się z listą naszych specjalistów, a następnie wybierz odpowiednią osobę dla Twojego dziecka</h3>
         <div>
-          <a href="/specjalisci/" class="cta__button button">Zarezerwuj wizytę u specjalisty</a>
+          <a href="/specjalisci/" class="cta__button button">Umów wizytę</a>
         </div>
       </div>
     </div>

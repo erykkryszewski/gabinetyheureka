@@ -42,7 +42,7 @@ if ($is_specialist_query || strpos($url, '_sf') !== false) {
   <div class="decorated-text">
     <div class="container">
       <div class="decorated-text__wrapper">
-        <h2 class="decorated-text__title">Dzięki różnorodnym kompetencjom i empatycznemu podejściu, Gabinety Heureka to przestrzeń, w której bez problemu znajdziesz wsparcie dla swojego dziecka. Wyszukaj odpowiednią terapię i umów się na wizytę, a my zajmiemy się resztą.</h2>
+        <h2 class="decorated-text__title">Dzięki różnorodnym kompetencjom i empatycznemu podejściu, Gabinety Heureka to przestrzeń, w której bez problemu znajdziesz wsparcie dla swojego dziecka Wyszukaj odpowiednią terapię i umów się na wizytę, a my zajmiemy się resztą.</h2>
       </div>
     </div>
   </div>

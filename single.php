@@ -57,7 +57,7 @@ $author_position = get_field('author_position', $page_id);
           <div class="subpage-hero__background subpage-hero__background--plain"></div>
           <div class="container">
             <div class="subpage-hero__wrapper">
-              <h1 class="subpage-hero__title subpage-hero__title--white"><?php echo apply_filters('the_title', 'Blog');?></h1>
+              <h1 class="subpage-hero__title"><?php echo apply_filters('the_title', 'Porady'); ?></h1>
             </div>
           </div>
         </div>
@@ -88,7 +88,7 @@ $author_position = get_field('author_position', $page_id);
                         </div>
                         <div class="prev-and-next-posts__content">
                           <a href="<?php echo get_permalink($prev_post->ID); ?>" class="prev-and-next-posts__title"><?php echo $prev_post->post_title; ?></a>
-                          <a href="<?php echo get_permalink($prev_post->ID); ?>" class="button button--single mt-4">Poprzedni wpis</a>
+                          <a href="<?php echo get_permalink($prev_post->ID); ?>" class="arrow-link mt-4">Poprzedni wpis</a>
                         </div>
                       </div>
                     <?php endif; ?>
@@ -102,7 +102,7 @@ $author_position = get_field('author_position', $page_id);
                         </div>
                         <div class="prev-and-next-posts__content">
                           <a href="<?php echo get_permalink($next_post->ID); ?>" class="prev-and-next-posts__title"><?php echo $next_post->post_title; ?></a>
-                          <a href="<?php echo get_permalink($next_post->ID); ?>" class="button button--single mt-4">Następny wpis</a>
+                          <a href="<?php echo get_permalink($next_post->ID); ?>" class="arrow-link mt-4">Następny wpis</a>
                         </div>
                       </div>
                     <?php endif; ?>
@@ -113,13 +113,13 @@ $author_position = get_field('author_position', $page_id);
           </div>
         </div>
         <div class="spacer spacer--small" style="height: 90px"></div>
-        <div class="cta">
+        <div class="cta cta--subpage">
           <div class="container">
             <div class="cta__wrapper">
-              <h2 class="cta__title">Zapoznaj się z naszą ofertą!</h2>
-              <p></p>
+              <h2 class="cta__title">Umów swoje dziecko na terapię już dzisiaj</h2>
+              <h3 class="cta__subtitle">Zapoznaj się z listą naszych specjalistów, a następnie wybierz odpowiednią osobę dla Twojego dziecka</h3>
               <div>
-                <a href="/kontakt/" class="cta__button button">Skontaktuj się</a>
+                <a href="/specjalisci/" class="cta__button button">Umów wizytę</a>
               </div>
             </div>
           </div>

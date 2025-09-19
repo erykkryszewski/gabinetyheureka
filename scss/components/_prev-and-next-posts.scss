@@ -151,8 +151,9 @@
 
   &__image {
     width: 33.33%;
+    max-width: 120px;
     padding: 0 15px 0 0;
-    height: 115px;
+    height: 90px;
     flex: 0 1 130px;
     position: relative;
     z-index: 1;

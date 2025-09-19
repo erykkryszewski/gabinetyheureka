@@ -3398,8 +3398,9 @@ html::-webkit-scrollbar-thumb {
 }
 .prev-and-next-posts__image {
   width: 33.33%;
+  max-width: 120px;
   padding: 0 15px 0 0;
-  height: 115px;
+  height: 90px;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 130px;
           flex: 0 1 130px;
@@ -4717,6 +4718,7 @@ html::-webkit-scrollbar-thumb {
   max-width: 600px;
   margin: 20px auto 0;
   color: #ffffff;
+  font-size: 19px;
 }
 .cta p a {
   color: #ffffff;
@@ -7534,18 +7536,11 @@ body.admin-bar .header--fixed {
 }
 
 .single-blog-post {
-  padding: 60px 0 0;
   overflow: hidden;
-}
-@media (max-width: 991px) {
-  .single-blog-post {
-    padding: 80px 0 0;
-    text-align: center;
-  }
 }
 .single-blog-post__image {
   width: 100%;
-  height: 500px;
+  height: 450px;
   margin: 0 0 35px;
   border-radius: 20px;
 }
