@@ -3,6 +3,8 @@
   text-align: center;
   background-color: $theme-color;
   position: relative;
+  max-width: 100%;
+  overflow: hidden;
 
   &--background {
     background: $very-light-gray;
@@ -52,15 +54,18 @@
 
   &__subtitle {
     margin: 10px 0 0;
+
+    @media(max-width: 767px) {
+      max-width: 360px;
+      margin: 10px auto 0;
+    }
   }
 
   &__title {
     @extend .h1;
   }
 
-  &__title,
-  &__subtitle,
-  p {
+  &__title, &__subtitle {
     color: $white;
   }
 
@@ -69,11 +74,12 @@
     margin: 20px auto 0;
     color: $white;
     font-size: 19px;
-
-    a {
-      color: $white;
-    }
   }
+
+  a {
+    color: $white;
+  }
+  
 
   &__button {
     margin: 35px 0 0;

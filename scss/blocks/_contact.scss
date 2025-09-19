@@ -44,8 +44,6 @@
     max-width: 360px;
 
     @media (max-width: 767px) {
-      align-items: center;
-      justify-content: center;
       max-width: 100%;
     }
 
@@ -66,6 +64,10 @@
           position: absolute;
           bottom: -3px;
           left: 0;
+
+          @media(max-width: 767px) {
+            bottom: 0;
+          }
         }
       }
     }
@@ -122,10 +124,6 @@
 
     p {
       margin: 0;
-
-      @media (max-width: 767px) {
-        text-align: center;
-      }
     }
   }
 
@@ -138,6 +136,7 @@
 
     @media (max-width: 767px) {
       margin: 30px 0 0;
+      padding: 25px;
     }
 
     form {
@@ -199,12 +198,17 @@
         display: block !important;
 
         @media (max-width: 767px) {
-          text-align: center;
           margin: 25px 0 0 !important;
+          text-align: left;
+          align-items: flex-start;
+          justify-content: flex-start;
         }
 
         input {
           border-radius: $theme-border-radius !important;
+          text-align: center !important;
+          display: inline-flex;
+          justify-content: center;
         }
       }
     }

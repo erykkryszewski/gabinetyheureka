@@ -2764,8 +2764,8 @@ ol > li {
 }
 .button {
   border: 1px solid #b22f89;
-  padding: 13px 25px;
-  font-size: 16px;
+  padding: 11px 20px;
+  font-size: 17px;
   font-weight: 600;
   min-width: 120px;
   text-transform: uppercase;
@@ -2789,10 +2789,9 @@ ol > li {
   position: relative;
   overflow: hidden;
 }
-@media (max-width: 449px) {
+@media (max-width: 767px) {
   .button {
-    padding: 9px 20px 9.5px;
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 .button:hover {
@@ -3079,13 +3078,6 @@ textarea::placeholder {
       -ms-flex-align: center;
           align-items: center;
   margin: 20px 0 20px;
-}
-@media (max-width: 767px) {
-  .social-media {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
 }
 .social-media a {
   display: block;
@@ -3585,6 +3577,20 @@ html::-webkit-scrollbar-thumb {
   font-size: 15px;
   font-weight: 500;
 }
+@media (max-width: 767px) {
+  .top-bar__phone, .top-bar__email {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .top-bar__phone::before, .top-bar__email::before {
   content: "";
   display: block;
@@ -3650,12 +3656,12 @@ html::-webkit-scrollbar-thumb {
 }
 .bottom-bar__wrapper p {
   color: #f5f5f5;
-  font-size: 13px;
+  font-size: 12px;
   margin: 0;
 }
 .bottom-bar__wrapper p a {
   color: #ffffff;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   text-decoration: none;
 }
@@ -4033,12 +4039,6 @@ html::-webkit-scrollbar-thumb {
 }
 @media (max-width: 767px) {
   .contact__details {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     max-width: 100%;
   }
 }
@@ -4059,6 +4059,11 @@ html::-webkit-scrollbar-thumb {
   position: absolute;
   bottom: -3px;
   left: 0;
+}
+@media (max-width: 767px) {
+  .contact__details > p span::after {
+    bottom: 0;
+  }
 }
 .contact__phone, .contact__email {
   display: -webkit-box;
@@ -4105,11 +4110,6 @@ html::-webkit-scrollbar-thumb {
 .contact__address p {
   margin: 0;
 }
-@media (max-width: 767px) {
-  .contact__address p {
-    text-align: center;
-  }
-}
 .contact__form {
   margin: 3px 0 0;
   padding: 50px;
@@ -4121,6 +4121,7 @@ html::-webkit-scrollbar-thumb {
 @media (max-width: 767px) {
   .contact__form {
     margin: 30px 0 0;
+    padding: 25px;
   }
 }
 .contact__form form .gform_body .gform_fields {
@@ -4168,12 +4169,25 @@ html::-webkit-scrollbar-thumb {
 }
 @media (max-width: 767px) {
   .contact__form form .gform_footer {
-    text-align: center;
     margin: 25px 0 0 !important;
+    text-align: left;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 .contact__form form .gform_footer input {
   border-radius: 20px !important;
+  text-align: center !important;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .contact__form .gform_confirmation_message {
   font-size: 15px;
@@ -4666,6 +4680,8 @@ html::-webkit-scrollbar-thumb {
   text-align: center;
   background-color: #b22f89;
   position: relative;
+  max-width: 100%;
+  overflow: hidden;
 }
 .cta--background {
   background: #f5f5f5;
@@ -4710,8 +4726,13 @@ html::-webkit-scrollbar-thumb {
 .cta__subtitle {
   margin: 10px 0 0;
 }
-.cta__title, .cta__subtitle,
-.cta p {
+@media (max-width: 767px) {
+  .cta__subtitle {
+    max-width: 360px;
+    margin: 10px auto 0;
+  }
+}
+.cta__title, .cta__subtitle {
   color: #ffffff;
 }
 .cta p {
@@ -4720,7 +4741,7 @@ html::-webkit-scrollbar-thumb {
   color: #ffffff;
   font-size: 19px;
 }
-.cta p a {
+.cta a {
   color: #ffffff;
 }
 .cta__button {
@@ -4800,6 +4821,11 @@ html::-webkit-scrollbar-thumb {
   text-transform: initial;
   max-width: 1070px;
   text-align: left;
+}
+@media (max-width: 767px) {
+  .decorated-text__title {
+    font-size: 22px;
+  }
 }
 .decorated-text--background {
   background: #89d426;
@@ -5849,6 +5875,11 @@ html::-webkit-scrollbar-thumb {
   margin: 0 0 80px;
   background: #444444;
 }
+@media (max-width: 767px) {
+  .subpage-hero {
+    margin: 0 0 50px;
+  }
+}
 .subpage-hero__background {
   width: 100%;
   height: 100%;
@@ -6234,6 +6265,14 @@ html::-webkit-scrollbar-thumb {
       -ms-flex-align: center;
           align-items: center;
 }
+@media (max-width: 767px) {
+  .text-images__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
 .text-images__content {
   width: 100%;
   margin: 30px 0 0;
@@ -6249,8 +6288,8 @@ html::-webkit-scrollbar-thumb {
 }
 @media (max-width: 767px) {
   .text-images__pictures-wrapper {
-    margin: 55px auto 0;
-    min-height: 400px;
+    margin: 0 auto 0;
+    min-height: 350px;
   }
 }
 .text-images__left-picture {
@@ -6272,6 +6311,11 @@ html::-webkit-scrollbar-thumb {
     height: 350px;
   }
 }
+@media (max-width: 767px) {
+  .text-images__left-picture {
+    top: 0;
+  }
+}
 @media (max-width: 499px) {
   .text-images__left-picture {
     height: 300px;
@@ -6289,6 +6333,11 @@ html::-webkit-scrollbar-thumb {
 @media (max-width: 1199px) {
   .text-images__right-picture {
     height: 350px;
+  }
+}
+@media (max-width: 767px) {
+  .text-images__right-picture {
+    top: 30px;
   }
 }
 @media (max-width: 499px) {
@@ -6558,6 +6607,11 @@ html::-webkit-scrollbar-thumb {
 }
 .three-boxes--background {
   background: #f5f5f5;
+}
+@media (max-width: 767px) {
+  .three-boxes {
+    margin: -30px 0 0;
+  }
 }
 .three-boxes__item {
   width: 100%;
@@ -6919,9 +6973,9 @@ html::-webkit-scrollbar-thumb {
   min-height: 70px;
   top: -45px;
 }
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .header--fixed {
-    top: -75px;
+    top: -62px;
   }
 }
 

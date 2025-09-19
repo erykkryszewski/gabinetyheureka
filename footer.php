@@ -88,6 +88,7 @@ $footer_fifth_column_content = get_field('footer_fifth_column_content', 'options
     <div class="container">
       <div class="bottom-bar__wrapper">
         <p><?php _e('Copyright', 'ercodingtheme');?> © <?php echo date("Y"); ?>&nbsp;<?php _e('Gabinety Heureka', 'ercodingtheme');?></p>
+        <p>Niektóre zdjęcia pochodzą z <a href="https://freepik.com/" target="_blank">www.freepik.pl</a></p>
         <p>Strona stworzona przez <a href="https://ercoding.pl/" target="_blank">Ercoding</a></p>
       </div>
     </div>

@@ -55,7 +55,7 @@ $body_classes = get_body_class();
             <a href="mailto:<?php echo esc_html($global_email); ?>" class="top-bar__email"><?php echo esc_html($global_email); ?></a>
           </div>
           <?php if (!empty($global_social_media)): ?>
-          <div class="top-bar__content top-bar__content--right">
+          <div class="top-bar__content top-bar__content--right desktop-only">
             <ul class="social-media top-bar__social-media <?php if (!is_front_page()) {
               echo 'top-bar__social-media--subpage';
             } ?>">

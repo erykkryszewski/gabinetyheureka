@@ -24,6 +24,10 @@
     text-transform: initial;
     max-width: 1070px;
     text-align: left;
+
+    @media(max-width: 767px) {
+      font-size: 22px;
+    }
   }
 
   &--background {

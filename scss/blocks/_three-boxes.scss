@@ -6,6 +6,10 @@
     background: $very-light-gray;
   }
 
+  @media(max-width: 767px) {
+    margin: -30px 0 0;
+  }
+
   &__item {
     width: 100%;
     position: relative;

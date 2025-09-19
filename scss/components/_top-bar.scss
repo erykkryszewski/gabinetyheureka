@@ -49,6 +49,13 @@
     font-size: 15px;
     font-weight: 500;
 
+    @media (max-width: 767px) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     &::before {
       content: '';
       display: block;

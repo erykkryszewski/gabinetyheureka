@@ -1033,8 +1033,8 @@
 }
 .editor-styles-wrapper .button {
   border: 1px solid #b22f89;
-  padding: 13px 25px;
-  font-size: 16px;
+  padding: 11px 20px;
+  font-size: 17px;
   font-weight: 600;
   min-width: 120px;
   text-transform: uppercase;
@@ -1058,10 +1058,9 @@
   position: relative;
   overflow: hidden;
 }
-@media (max-width: 449px) {
+@media (max-width: 767px) {
   .editor-styles-wrapper .button {
-    padding: 9px 20px 9.5px;
-    font-size: 12px;
+    font-size: 13px;
   }
 }
 .editor-styles-wrapper .button:hover {
