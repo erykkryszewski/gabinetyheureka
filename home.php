@@ -40,6 +40,7 @@ $global_logo = get_field('global_logo', 'options');
       </div>
     </div>
   </div>
+  <div class="spacer spacer--small" style="height:20px;"></div>
   <!-- max 12 items -->
   <?php if (have_posts()): ?>
   <div class="theme-blog theme-blog--subpage">
@@ -74,7 +75,7 @@ $global_logo = get_field('global_logo', 'options');
                   </div>
                 </div>
               </div>
-              <a href="<?php the_permalink(); ?>" class="theme-blog__button button"><?php _e('Czytaj więcej', 'ercodingtheme'); ?></a>
+              <a href="<?php the_permalink(); ?>" class="arrow-link theme-blog__link"><?php _e('Czytaj więcej', 'ercodingtheme'); ?></a>
             </div>
           </div>
           <?php endwhile; ?>

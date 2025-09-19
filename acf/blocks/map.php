@@ -33,7 +33,7 @@ $allowed_stuff = [
   } else {
     echo 'container';
   } ?>">
-    <div class="map__content" style="height:<?php echo esc_html($map_desktop_height); ?>px">
+    <div class="map__content <?php if ($full_width !== 'true') { echo 'map__content--border-radius'; }?>" style="height:<?php echo esc_html($map_desktop_height); ?>px">
       <?php echo wp_kses($map_iframe, $allowed_stuff); ?>
     </div>
   </div>
