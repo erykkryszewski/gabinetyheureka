@@ -1,122 +1,128 @@
 .specialists {
-  position: relative;
-  width: 100%;
-  margin: 50px 0 0;
-
-  &__wrapper {
-    width: 100%;
     position: relative;
-  }
+    width: 100%;
+    margin: 50px 0 0;
 
-  &__filtration {
-    margin: 0 0 10px;
-
-    form {
-      ul {
-        display: flex;
-        gap: 20px;
-      }
+    &__wrapper {
+        width: 100%;
+        position: relative;
     }
-  }
+
+    &__filtration {
+        margin: 0 0 10px;
+
+        form {
+            ul {
+                display: flex;
+                gap: 20px;
+            }
+        }
+    }
 }
 
 .specialist {
-  width: 100%;
-  position: relative;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 20px -1px;
-  height: calc(100% - 30px);
-  padding: 25px;
-  background: rgb(255, 255, 255);
-  border-radius: 20px;
-  margin: 30px 0px 0px;
-
-  strong {
-    font-weight: 600;
-  }
-
-  &--single {
-    box-shadow: none;
-    height: auto;
-    padding: 0;
-    background: transparent;
-    border-radius: none;
-    margin: 0;
-  }
-
-  &__image {
-    height: 330px;
     width: 100%;
-    border-radius: 18px;
+    position: relative;
+    box-shadow: rgb(0 0 0 / 16%) 0 3px 20px -1px;
+    height: calc(100% - 30px);
+    padding: 25px;
+    background: rgb(255 255 255);
+    border-radius: 20px;
+    margin: 30px 0 0;
 
-    img {
-      border-radius: 18px;
-      object-position: top;
+    strong {
+        font-weight: 600;
     }
 
     &--single {
-      height: 400px;
+        box-shadow: none;
+        height: auto;
+        padding: 0;
+        background: transparent;
+        border-radius: none;
+        margin: 0;
     }
-  }
 
-  &__title {
-    margin: 21px 0 12px;
-    @extend .h3;
-  }
+    &__image {
+        height: 330px;
+        width: 100%;
+        border-radius: 18px;
+        background: $very-light-gray;
 
-  &__name {
-    @extend .h2;
-    margin: 0 0 19px;
-  }
+        img {
+            border-radius: 18px;
+            object-position: top;
+            mix-blend-mode: multiply;
+            opacity: 0.98;
+        }
 
-  &__skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    width: 100%;
-
-    > div {
-      font-size: 13px;
-      border-radius: 15px;
-      background: $light-gray;
-      color: $text-color;
-      font-weight: 500;
-      padding: 5px 10px;
-      text-align: center;
+        &--single {
+            height: 400px;
+        }
     }
-  }
 
-  &__content {
-    p {
-      font-size: 15px;
-      line-height: 1.4;
-      margin: 15px 0 0;
+    &__title {
+        margin: 21px 0 12px;
+
+        @extend .h3;
     }
-  }
 
-  &__info {
-    @extend .paragraph;
-    display: block;
-    margin: 5px 0 0;
-  }
+    &__name {
+        margin: 0 0 19px;
 
-  &__plan4u {
-    width: 100%;
-    height: 255px;
-    background: $very-light-gray;
-    margin: 35px 0 0;
-    max-width: 313px;
-    border-radius: 15px;
-  }
-
-  &__description {
-    margin: 25px 0 0;
-  }
-
-  &:hover {
-    a.arrow-link {
-      &::after {
-        right: -8px;
-      }
+        @extend .h2;
     }
-  }
+
+    &__skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        width: 100%;
+
+        > div {
+            font-size: 13px;
+            border-radius: 15px;
+            background: $light-gray;
+            color: $text-color;
+            font-weight: 500;
+            padding: 5px 10px;
+            text-align: center;
+        }
+    }
+
+    &__content {
+        p {
+            font-size: 15px;
+            line-height: 1.4;
+            margin: 15px 0 0;
+        }
+    }
+
+    &__info {
+        display: block;
+        margin: 5px 0 0;
+
+        @extend .paragraph;
+    }
+
+    &__plan4u {
+        width: 100%;
+        height: 255px;
+        // background: $very-light-gray;
+        margin: 35px 0 0;
+        max-width: 313px;
+        border-radius: 15px;
+    }
+
+    &__description {
+        margin: 25px 0 0;
+    }
+
+    &:hover {
+        a.arrow-link {
+            &::after {
+                right: -8px;
+            }
+        }
+    }
 }
