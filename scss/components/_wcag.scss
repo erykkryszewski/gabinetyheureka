@@ -1,3 +1,4 @@
+/* === WCAG TOOLBAR === */
 .wcag {
     width: 100%;
     display: flex;
@@ -11,19 +12,154 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 0;
 
-        img,
-        svg {
+        svg,
+        img {
             width: 100%;
             display: block;
             max-width: 100%;
+
+            path {
+                fill: #4c4c4c;
+                transition: fill 0.2s ease;
+            }
+        }
+
+        &--active {
+            svg path {
+                fill: $theme-color;
+            }
         }
     }
 
     &__contrast {
-        img,
-        svg {
+        svg,
+        img {
             max-width: 20px;
         }
+    }
+}
+
+/* === FONT SIZE MODE === */
+body.wcag-font-size {
+    font-size: 1.25em;
+
+    h1,
+    .h1 {
+        font-size: 56px;
+    }
+
+    h2,
+    .h2 {
+        font-size: 37px;
+    }
+
+    h3,
+    .h3 {
+        font-size: 28px;
+    }
+
+    h4,
+    .h4 {
+        font-size: 24px;
+    }
+
+    p,
+    .paragraph,
+    li,
+    ul li,
+    ul li span,
+    ol li,
+    ol li span,
+    a,
+    p,
+    p *,
+    li,
+    li * {
+        font-size: 21px !important;
+        line-height: 1.45 !important;
+    }
+
+    #menu-navigation {
+        li * {
+            font-size: 18px !important;
+        }
+    }
+
+    a.arrow-link {
+        font-size: 21px;
+    }
+
+    .bottom-bar * {
+        font-size: 17px;
+    }
+
+    .footer__column ul li a {
+        font-size: 21px;
+    }
+
+    .footer__address span {
+        font-size: 21px;
+    }
+}
+
+/* === CONTRAST MODE === */
+body.wcag-contrast {
+    background: $dark2;
+    color: $white;
+
+    a {
+        color: lighten($theme-color, 20%);
+        text-decoration: underline;
+
+        &:hover {
+            color: lighten($theme-color, 30%);
+        }
+    }
+
+    header,
+    .header,
+    .nav,
+    footer {
+        background: $dark2;
+        border-color: $gray;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    li,
+    span {
+        color: $white;
+    }
+
+    .btn,
+    button,
+    input[type="submit"] {
+        background: $white;
+        color: $dark2;
+        border-color: $white;
+
+        &:hover {
+            background: $theme-color;
+            color: $white;
+            border-color: $theme-color;
+        }
+    }
+
+    .border,
+    hr {
+        border-color: $gray;
+    }
+
+    .section,
+    .block {
+        background: transparent;
     }
 }

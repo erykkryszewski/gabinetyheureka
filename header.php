@@ -31,9 +31,7 @@ $body_classes = get_body_class();
 
     <body <?php if (!is_front_page()) { body_class('theme-subpage'); } else { body_class('theme-frontpage'); } ?>>
         <div class="preloader">
-            <div class="preloader__logo">
-                <?php if (!empty($theme_sign)) { echo wp_get_attachment_image($theme_sign, 'full', '', ['class' => '']); } else { echo ''; } ?>
-            </div>
+            <div class="preloader__logo"><?php if (!empty($theme_sign)) { echo wp_get_attachment_image($theme_sign, 'full', '', ['class' => '']); } else { echo ''; } ?></div>
         </div>
         <header class="header <?php if (!is_front_page()) { echo 'header--subpage'; } ?>">
             <div class="top-bar">
@@ -46,55 +44,32 @@ $body_classes = get_body_class();
                         <?php if (!empty($global_social_media)): ?>
                         <div class="top-bar__content top-bar__content--right desktop-only">
                             <div class="wcag">
-                                <button class="wcag__font-size">
-                                    <svg
-                                        version="1.1"
-                                        id="Capa_1"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        x="0px"
-                                        y="0px"
-                                        viewBox="0 0 24.966 24.966"
-                                        style="enable-background:new 0 0 24.966 24.966;"
-                                        xml:space="preserve"
-                                    >
+                                <button class="wcag__font-size" aria-label="Zwiększ czcionkę">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.966 24.966">
                                         <g>
                                             <path
-                                                style="fill:#4c4c4c;"
-                                                d="M24.966,12.466v0.961c0,0.532-0.43,0.961-0.961,0.961h-1.923v1.923c0,0.532-0.43,0.961-0.961,0.961
-		H20.16c-0.532,0-0.961-0.43-0.961-0.961v-1.923h-1.923c-0.532,0-0.961-0.43-0.961-0.961v-0.961c0-0.532,0.43-0.961,0.961-0.961
-		h1.923V9.582c0-0.532,0.43-0.961,0.961-0.961h0.961c0.532,0,0.961,0.43,0.961,0.961v1.923h1.923
-		C24.536,11.504,24.966,11.934,24.966,12.466z M15.272,20.482c0.051,0.206,0.059,0.364,0.026,0.465
-		c-0.036,0.102-0.145,0.156-0.331,0.156h-3.153c-0.288,0-0.484-0.066-0.586-0.194c-0.102-0.131-0.195-0.335-0.279-0.608
-		l-0.816-3.028H4.989l-0.85,3.104c-0.086,0.276-0.195,0.468-0.331,0.57c-0.136,0.102-0.322,0.156-0.56,0.156H0.427
-		c-0.187,0-0.314-0.038-0.381-0.117c-0.069-0.077-0.061-0.262,0.025-0.557L4.978,4.617c0.085-0.241,0.186-0.428,0.305-0.559
-		C5.4,3.93,5.629,3.864,5.97,3.864h3.203c0.356,0,0.588,0.071,0.699,0.209c0.11,0.138,0.207,0.328,0.292,0.569L15.272,20.482z
-		 M9.357,14.389l-1.712-6.35H7.519l-1.74,6.35H9.357z"
-                                            />
+                                                d="M24.966,12.466v0.961c0,0.532-0.43,0.961-0.961,0.961h-1.923v1.923c0,0.532-0.43,0.961-0.961,0.961H20.16
+        c-0.532,0-0.961-0.43-0.961-0.961v-1.923h-1.923c-0.532,0-0.961-0.43-0.961-0.961v-0.961c0-0.532,0.43-0.961,0.961-0.961h1.923
+        V9.582c0-0.532,0.43-0.961,0.961-0.961h0.961c0.532,0,0.961,0.43,0.961,0.961v1.923h1.923
+        C24.536,11.504,24.966,11.934,24.966,12.466z M15.272,20.482c0.051,0.206,0.059,0.364,0.026,0.465
+        c-0.036,0.102-0.145,0.156-0.331,0.156h-3.153c-0.288,0-0.484-0.066-0.586-0.194c-0.102-0.131-0.195-0.335-0.279-0.608
+        l-0.816-3.028H4.989l-0.85,3.104c-0.086,0.276-0.195,0.468-0.331,0.57c-0.136,0.102-0.322,0.156-0.56,0.156H0.427
+        c-0.187,0-0.314-0.038-0.381-0.117c-0.069-0.077-0.061-0.262,0.025-0.557L4.978,4.617c0.085-0.241,0.186-0.428,0.305-0.559
+        C5.4,3.93,5.629,3.864,5.97,3.864h3.203c0.356,0,0.588,0.071,0.699,0.209c0.11,0.138,0.207,0.328,0.292,0.569L15.272,20.482z
+        M9.357,14.389l-1.712-6.35H7.519l-1.74,6.35H9.357z"
+                                            ></path>
                                         </g>
                                     </svg>
                                 </button>
-                                <button class="wcag__contrast">
-                                    <svg
-                                        version="1.1"
-                                        id="Capa_1"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                        x="0px"
-                                        y="0px"
-                                        width="405.526px"
-                                        height="405.526px"
-                                        viewBox="0 0 405.526 405.526"
-                                        style="enable-background:new 0 0 405.526 405.526;"
-                                        xml:space="preserve"
-                                    >
+
+                                <button class="wcag__contrast" aria-label="Wysoki kontrast">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 405.526 405.526">
                                         <g>
                                             <path
-                                                style="fill:#4c4c4c;"
                                                 d="M202.764,0C90.958,0,0,90.958,0,202.763c0,111.809,90.958,202.764,202.763,202.764
-		                                        c111.808,0,202.763-90.955,202.763-202.764C405.526,90.958,314.571,0,202.764,0z M22.952,202.763
-		                                        c0-99.146,80.665-179.811,179.812-179.811v359.623C103.616,382.574,22.952,301.91,22.952,202.763z"
-                                            />
+        c111.808,0,202.763-90.955,202.763-202.764C405.526,90.958,314.571,0,202.764,0z M22.952,202.763
+        c0-99.146,80.665-179.811,179.812-179.811v359.623C103.616,382.574,22.952,301.91,22.952,202.763z"
+                                            ></path>
                                         </g>
                                     </svg>
                                 </button>
@@ -136,13 +111,9 @@ $body_classes = get_body_class();
                         <?php endif; ?> <?php if (!empty($header_button)): ?>
                         <a href="<?php echo esc_html($header_button['url']); ?>" class="button nav__button <?php if (!is_front_page()) { echo 'nav__button--subpage'; } ?>" target="<?php echo esc_html($header_button['target']); ?>">
                             <?php if (!empty($header_button_before_icon)): ?>
-                            <span class="button__icon button__icon--before">
-                                <?php echo wp_get_attachment_image($header_button_before_icon, 'full', '', [ 'loading' => 'eager', 'decoding' => 'async', ]); ?>
-                            </span>
+                            <span class="button__icon button__icon--before"><?php echo wp_get_attachment_image($header_button_before_icon, 'full', '', [ 'loading' => 'eager', 'decoding' => 'async', ]); ?></span>
                             <?php endif; ?> <?php echo esc_html($header_button['title']); ?> <?php if (!empty($header_button_after_icon)): ?>
-                            <span class="button__icon button__icon--after">
-                                <?php echo wp_get_attachment_image($header_button_after_icon, 'full', '', [ 'loading' => 'eager', 'decoding' => 'async', ]); ?>
-                            </span>
+                            <span class="button__icon button__icon--after"><?php echo wp_get_attachment_image($header_button_after_icon, 'full', '', [ 'loading' => 'eager', 'decoding' => 'async', ]); ?></span>
                             <?php endif; ?>
                         </a>
                         <?php endif; ?>
