@@ -17,6 +17,8 @@ $header_button = get_field("header_button", "options");
 $header_button_before_icon = get_field("header_button_before_icon", "options");
 $header_button_after_icon = get_field("header_button_after_icon", "options");
 
+$wcag = get_field("wcag", "options");
+
 $body_classes = get_body_class();
 ?>
 
@@ -41,7 +43,7 @@ $body_classes = get_body_class();
                             <a href="tel:<?php echo esc_html($global_phone_number); ?>" class="top-bar__phone ercodingtheme-phone-number"><?php echo esc_html($global_phone_number); ?></a>
                             <a href="mailto:<?php echo esc_html($global_email); ?>" class="top-bar__email"><?php echo esc_html($global_email); ?></a>
                         </div>
-                        <?php if (!empty($global_social_media)): ?>
+                        <?php if ('true' == $wcag): ?>
                         <div class="top-bar__content top-bar__content--right desktop-only">
                             <div class="wcag">
                                 <button class="wcag__font-size" aria-label="Zwiększ czcionkę">
