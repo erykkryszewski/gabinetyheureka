@@ -48,6 +48,8 @@
         width: 100%;
         border-radius: 18px;
         background: $very-light-gray;
+        position: relative;
+        z-index: 2;
 
         img {
             border-radius: 18px;
@@ -120,11 +122,12 @@
         max-width: 100%;
         border-radius: 15px;
         position: relative;
+        z-index: 1;
 
         iframe {
             @media (width >= 1200px) {
                 position: absolute;
-                z-index: -1;
+                z-index: 1;
                 left: -100px;
                 top: -154px;
             }
