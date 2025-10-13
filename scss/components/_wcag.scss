@@ -135,8 +135,62 @@ body.wcag-contrast {
     h4,
     p,
     li,
-    span {
+    li span,
+    span,
+    p strong,
+    .button,
+    .button span,
+    .button strong,
+    ul li a,
+    .top-bar__phone,
+    .top-bar__email,
+    .theme-blog__title {
         color: $white;
+    }
+
+    .top-bar__email,
+    .top-bar__phone {
+        &::before {
+            filter: brightness(0) invert(1);
+        }
+    }
+
+    .social-media a img {
+        filter: brightness(0) invert(1);
+    }
+
+    .theme-blog__item {
+        box-shadow: none;
+        border: 2px solid $white;
+    }
+
+    .subpage-hero {
+        background: $theme-color;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        p {
+            color: $white;
+        }
+    }
+
+    .before,
+    .after {
+        display: none;
+    }
+
+    .three-boxes h3,
+    .three-boxes__content p,
+    .team__item h3,
+    .team__item p,
+    .team__item span,
+    .faq *,
+    .specialist:not(.specialist--single) .specialist__title,
+    .specialist:not(.specialist--single) p {
+        color: $dark2;
     }
 
     .btn,

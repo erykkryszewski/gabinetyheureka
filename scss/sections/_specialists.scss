@@ -57,7 +57,11 @@
         }
 
         &--single {
-            height: 400px;
+            height: 500px;
+
+            @media (width <= 1199px) {
+                height: 400px;
+            }
         }
     }
 
@@ -71,6 +75,10 @@
         margin: 0 0 19px;
 
         @extend .h2;
+
+        @media (width <= 1199px) {
+            margin: 20px 0 0;
+        }
     }
 
     &__skills {
@@ -107,11 +115,24 @@
 
     &__plan4u {
         width: 100%;
-        height: 255px;
         // background: $very-light-gray;
         margin: 35px 0 0;
-        max-width: 313px;
+        max-width: 100%;
         border-radius: 15px;
+        position: relative;
+
+        iframe {
+            @media (width >= 1200px) {
+                position: absolute;
+                z-index: -1;
+                left: -100px;
+                top: -154px;
+            }
+        }
+
+        @media (width >= 1200px) {
+            height: 430px;
+        }
     }
 
     &__description {

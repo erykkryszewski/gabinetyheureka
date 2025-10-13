@@ -38,12 +38,12 @@ $form_id = get_field("form_id", $page_id);
     <div class="specialist specialist--single">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 col-lg-5 offset-lg-1 col-xl-4 offset-xl-2">
+                <div class="col-12 offset-xl-1 col-xl-5">
                     <div class="specialist__image specialist__image--single">
                         <?php echo wp_get_attachment_image(get_post_thumbnail_id($post->ID), 'full', '', ['class' => 'object-fit-cover',]); ?>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-5 col-xl-4">
+                <div class="col-12 col-xl-5">
                     <h1 class="specialist__name"><?php the_title(); ?></h1>
                     <div class="specialist__details">
                         <div class="specialist__skills">
@@ -67,18 +67,19 @@ $form_id = get_field("form_id", $page_id);
                             </div>
                             <?php endif; ?>
                         </div>
-
-                        <?php if(!empty($plan4u_code)):?>
-                        <div class="specialist__plan4u"><?php echo $plan4u_code;?></div>
-                        <?php endif;?>
                     </div>
+                    <?php if(!empty($plan4u_code)):?>
+                    <div class="specialist__plan4u"><?php echo $plan4u_code;?></div>
+                    <?php endif;?>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
-                    <div class="specialist__description">
-                        <p><?php the_content(); ?></p>
-                        <a href="#" class="button mt-4">Zadaj pytanie</a>
+                <div class="col-12 col-xl-10 offset-xl-1">
+                    <div class="specialist__wrapper">
+                        <div class="specialist__description">
+                            <p><?php the_content(); ?></p>
+                            <a href="#" class="button mt-4">Zadaj pytanie</a>
+                        </div>
                     </div>
                 </div>
             </div>
