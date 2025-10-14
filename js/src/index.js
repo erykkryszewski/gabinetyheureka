@@ -117,6 +117,7 @@ import "./blocks/wyswig-content";
 import "./sections/header";
 import "./sections/navigation";
 import "./sections/main";
+import "./sections/specialists";
 
 import "./components/spacer";
 import "./components/popup";

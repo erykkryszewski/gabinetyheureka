@@ -15,6 +15,24 @@
             ul {
                 display: flex;
                 gap: 20px;
+
+                li {
+                    label,
+                    input {
+                        @media (width <= 767px) {
+                            width: 100%;
+                        }
+                    }
+
+                    @media (width <= 767px) {
+                        width: 100%;
+                    }
+                }
+
+                @media (width <= 767px) {
+                    flex-direction: column;
+                    gap: 0;
+                }
             }
         }
     }
@@ -57,7 +75,7 @@
         height: 330px;
         width: 100%;
         border-radius: 18px;
-        background: $white;
+        background: $very-light-gray;
         position: relative;
         z-index: 2;
 
@@ -70,9 +88,11 @@
 
         &--single {
             height: 500px;
+            background: $white;
 
             @media (width <= 991px) {
                 height: 400px;
+                background: $very-light-gray;
             }
         }
     }
