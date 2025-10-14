@@ -43,11 +43,21 @@
         margin: 0;
     }
 
+    &__container {
+        @media (width >= 992px) {
+            background: $very-light-gray;
+            padding: 35px;
+            border-radius: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+    }
+
     &__image {
         height: 330px;
         width: 100%;
         border-radius: 18px;
-        background: $very-light-gray;
+        background: $white;
         position: relative;
         z-index: 2;
 
@@ -55,15 +65,27 @@
             border-radius: 18px;
             object-position: top;
             mix-blend-mode: multiply;
-            opacity: 0.98;
+            opacity: 0.99;
         }
 
         &--single {
             height: 500px;
 
-            @media (width <= 1199px) {
+            @media (width <= 991px) {
                 height: 400px;
             }
+        }
+    }
+
+    &__column {
+        width: 100%;
+
+        @media (width >= 992px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+            align-items: flex-start;
         }
     }
 
@@ -78,8 +100,8 @@
 
         @extend .h2;
 
-        @media (width <= 1199px) {
-            margin: 20px 0 0;
+        @media (width <= 991px) {
+            margin: 20px 0;
         }
     }
 
@@ -92,8 +114,8 @@
         > div {
             font-size: 13px;
             border-radius: 15px;
-            background: $light-gray;
-            color: $text-color;
+            background: $dark;
+            color: $white;
             font-weight: 500;
             padding: 5px 10px;
             text-align: center;
@@ -124,22 +146,30 @@
         position: relative;
         z-index: 1;
 
-        iframe {
-            @media (width >= 1200px) {
-                position: absolute;
-                z-index: 1;
-                left: -100px;
-                top: -154px;
-            }
-        }
+        // iframe {
+        //     @media (width >= 992px) {
+        //         position: absolute;
+        //         z-index: 1;
+        //         left: -100px;
+        //         top: -154px;
+        //     }
+        // }
 
-        @media (width >= 1200px) {
-            height: 430px;
-        }
+        // @media (width >= 992px) {
+        //     height: 430px;
+        // }
     }
 
     &__description {
         margin: 25px 0 0;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            @extend .h3;
+        }
     }
 
     &:hover {

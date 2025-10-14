@@ -11,15 +11,15 @@ h1,
 h1 > strong,
 h1 > b,
 h1 > span {
-  color: $text-color;
-  font-family: $font-primary;
-  font-size: 45px;
-  line-height: 1.1;
-  font-weight: 500;
+    color: $text-color;
+    font-family: $font-primary;
+    font-size: 45px;
+    line-height: 1.1;
+    font-weight: 500;
 
-  @media (max-width: 767px) {
-    font-size: 38px;
-  }
+    @media (width <= 767px) {
+        font-size: 38px;
+    }
 }
 
 h2,
@@ -27,15 +27,15 @@ h2,
 h2 > strong,
 h2 > b,
 h2 > span {
-  color: $text-color;
-  font-family: $font-primary;
-  font-size: 30px;
-  line-height: 1.1;
-  font-weight: 500;
+    color: $text-color;
+    font-family: $font-primary;
+    font-size: 30px;
+    line-height: 1.1;
+    font-weight: 500;
 
-  @media (max-width: 1199px) {
-    font-size: 28px;
-  }
+    @media (width <= 1199px) {
+        font-size: 28px;
+    }
 }
 
 h3,
@@ -43,15 +43,15 @@ h3,
 h3 > strong,
 h3 > b,
 h3 > span {
-  color: $text-color;
-  font-family: $font-primary;
-  font-size: 23px;
-  line-height: 1.1;
-  font-weight: 500;
+    color: $text-color;
+    font-family: $font-primary;
+    font-size: 23px;
+    line-height: 1.1;
+    font-weight: 500;
 
-  @media (max-width: 1199px) {
-    font-size: 22px;
-  }
+    @media (width <= 1199px) {
+        font-size: 22px;
+    }
 }
 
 h4,
@@ -59,78 +59,82 @@ h4,
 h4 > strong,
 h4 > b,
 h4 > span {
-  color: $text-color;
-  font-family: $font-primary;
-  font-size: 20px;
-  line-height: 1.1;
-  font-weight: 500;
+    color: $text-color;
+    font-family: $font-primary;
+    font-size: 20px;
+    line-height: 1.1;
+    font-weight: 500;
 
-  @media (max-width: 1199px) {
-    font-size: 18px;
-  }
+    @media (width <= 1199px) {
+        font-size: 18px;
+    }
 }
 
 p,
 .paragraph {
-  font-size: 17px;
-  line-height: 1.35;
-  font-weight: 400;
-  margin: 20px 0 0;
-  color: $text-color;
-
-  > a {
-    font-weight: 400;
     font-size: 17px;
     line-height: 1.35;
-    text-decoration: underline;
-    display: inline-block;
+    font-weight: 400;
+    margin: 20px 0 0;
     color: $text-color;
 
-    &:hover {
-      text-decoration: underline;
-      color: $text-color;
+    > a {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 1.35;
+        text-decoration: underline;
+        display: inline-block;
+        color: $text-color;
+
+        &:hover {
+            text-decoration: underline;
+            color: $text-color;
+        }
     }
-  }
 
-  > strong {
-    font-weight: 500;
-    font-size: 17px;
-    line-height: 1.35;
-    color: $text-color;
-  }
+    > strong {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 1.35;
+        color: $text-color;
+    }
 
-  > span {
-    font-size: 17px;
-    line-height: 1.35;
-    font-weight: 400;
-    color: $text-color;
-  }
+    > span {
+        font-size: 17px;
+        line-height: 1.35;
+        font-weight: 400;
+        color: $text-color;
+    }
 
-  &.small {
-    font-size: 15px;
-    line-height: 1.4;
-  }
+    &.small {
+        font-size: 15px;
+        line-height: 1.4;
+    }
 }
 
 ul > li,
 ol > li,
 ul.wp-block-list li,
 ol.wp-block-list li {
-  font-size: 17px;
-  line-height: 1.35;
-  font-weight: 400;
-
-  > strong {
-    font-weight: 600;
-    font-size: 17px;
-    line-height: 1.35;
-    color: $text-color;
-  }
-
-  > span {
     font-size: 17px;
     line-height: 1.35;
     font-weight: 400;
-    color: $text-color;
-  }
+
+    > strong {
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 1.35;
+        color: $text-color;
+    }
+
+    > span {
+        font-size: 17px;
+        line-height: 1.35;
+        font-weight: 400;
+        color: $text-color;
+    }
+
+    @media (width <= 991px) {
+        margin: 0 0 0 20px;
+    }
 }

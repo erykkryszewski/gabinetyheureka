@@ -21,6 +21,7 @@ $location = get_field("location", $page_id);
 $phone_number = get_field("phone_number", $page_id);
 $email = get_field("email", $page_id);
 $plan4u_code = get_field("plan4u_code", $page_id);
+$short_text = get_field("short_text", $page_id);
 
 $form_id = get_field("form_id", $page_id);
 ?>
@@ -37,49 +38,53 @@ $form_id = get_field("form_id", $page_id);
     <?php if (have_posts()): ?> <?php while (have_posts()): the_post(); ?> <?php if (get_post_type() == 'specjalisci'): ?>
     <div class="specialist specialist--single">
         <div class="container">
-            <div class="row">
-                <div class="col-12 offset-xl-1 col-xl-5">
-                    <div class="specialist__image specialist__image--single">
-                        <?php echo wp_get_attachment_image(get_post_thumbnail_id($post->ID), 'full', '', ['class' => 'object-fit-cover',]); ?>
+            <div class="specialist__container">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="specialist__image specialist__image--single"><?php echo wp_get_attachment_image(get_post_thumbnail_id($post->ID), 'full', '', ['class' => 'object-fit-cover',]); ?></div>
                     </div>
-                </div>
-                <div class="col-12 col-xl-5">
-                    <h1 class="specialist__name"><?php the_title(); ?></h1>
-                    <div class="specialist__details">
-                        <div class="specialist__skills">
-                            <?php $therapy_terms = get_the_terms($post->ID, 'terapia'); ?> <?php if ($therapy_terms && !is_wp_error($therapy_terms)): ?> <?php foreach ($therapy_terms as $therapy_term): ?>
-                            <div class="specialist__skill specialist__skill--therapy">
-                                <?php echo esc_html($therapy_term->name); ?>
+                    <div class="col-12 col-lg-6">
+                        <div class="specialist__column">
+                            <div>
+                                <h1 class="specialist__name"><?php the_title(); ?></h1>
+                                <div class="specialist__details">
+                                    <div class="specialist__skills">
+                                        <?php $specialist_terms = get_the_terms($post->ID, 'tytul'); ?> <?php if ($specialist_terms && !is_wp_error($specialist_terms)): ?> <?php foreach ($specialist_terms as $specialist_term): ?>
+                                        <div class="specialist__skill specialist__skill--specialist"><?php echo esc_html($specialist_term->name); ?></div>
+                                        <?php endforeach; ?> <?php endif; ?> <?php $therapy_terms = get_the_terms($post->ID, 'terapia'); ?> <?php if ($therapy_terms && !is_wp_error($therapy_terms)): ?> <?php foreach ($therapy_terms as $therapy_term): ?>
+                                        <div class="specialist__skill specialist__skill--therapy"><?php echo esc_html($therapy_term->name); ?></div>
+                                        <?php endforeach; ?> <?php endif; ?> <?php $location_terms = get_the_terms($post->ID, 'lokalizacja'); ?> <?php if ($location_terms && !is_wp_error($location_terms)): ?> <?php foreach ($location_terms as $location_term): ?>
+                                        <div class="specialist__skill specialist__skill--location"><?php echo esc_html($location_term->name); ?></div>
+                                        <?php endforeach; ?> <?php endif; ?> <?php if (!empty($phone_number)): ?>
+                                        <div class="specialist__skill specialist__skill--phone">
+                                            <a href="tel:<?php echo preg_replace('/\s+/', '', esc_html($phone_number)); ?>" class="specialist__phone">
+                                                <span class="ercodingtheme-phone-number"><?php echo esc_html($phone_number); ?></span>
+                                            </a>
+                                        </div>
+                                        <?php endif; ?> <?php if (!empty($email)): ?>
+                                        <div class="specialist__skill specialist__skill--email">
+                                            <a href="mailto:<?php echo antispambot($email); ?>" class="specialist__email"><?php echo antispambot($email); ?></a>
+                                        </div>
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                                <div class="specialist__description"><?php echo apply_filters('the_content', $short_text);?></div>
                             </div>
-                            <?php endforeach; ?> <?php endif; ?> <?php $location_terms = get_the_terms($post->ID, 'lokalizacja'); ?> <?php if ($location_terms && !is_wp_error($location_terms)): ?> <?php foreach ($location_terms as $location_term): ?>
-                            <div class="specialist__skill specialist__skill--location">
-                                <?php echo esc_html($location_term->name); ?>
-                            </div>
-                            <?php endforeach; ?> <?php endif; ?> <?php if (!empty($phone_number)): ?>
-                            <div class="specialist__skill specialist__skill--phone">
-                                <a href="tel:<?php echo preg_replace('/\s+/', '', esc_html($phone_number)); ?>" class="specialist__phone">
-                                    <span class="ercodingtheme-phone-number"><?php echo esc_html($phone_number); ?></span>
-                                </a>
-                            </div>
-                            <?php endif; ?> <?php if (!empty($email)): ?>
-                            <div class="specialist__skill specialist__skill--email">
-                                <a href="mailto:<?php echo antispambot($email); ?>" class="specialist__email"><?php echo antispambot($email); ?></a>
-                            </div>
-                            <?php endif; ?>
+                            <a href="#umow-wizyte" class="button mt-4">Umów wizytę</a>
                         </div>
                     </div>
-                    <?php if(!empty($plan4u_code)):?>
-                    <div class="specialist__plan4u"><?php echo $plan4u_code;?></div>
-                    <?php endif;?>
                 </div>
             </div>
             <div class="row">
-                <div class="col-12 col-xl-10 offset-xl-1">
+                <div class="col-12 col-lg-10 offset-xl-1">
                     <div class="specialist__wrapper">
-                        <div class="specialist__description">
-                            <p><?php the_content(); ?></p>
-                            <a href="#" class="button mt-4">Zadaj pytanie</a>
+                        <div class="specialist__description"><?php the_content(); ?></div>
+                        <?php if(!empty($plan4u_code)):?>
+                        <div class="specialist__plan4u">
+                            <div class="section-id" id="umow-wizyte"></div>
+                            <?php echo $plan4u_code;?>
                         </div>
+                        <?php endif;?>
                     </div>
                 </div>
             </div>
