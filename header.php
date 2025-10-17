@@ -33,7 +33,9 @@ $body_classes = get_body_class();
 
     <body <?php if (!is_front_page()) { body_class('theme-subpage'); } else { body_class('theme-frontpage'); } ?>>
         <div class="preloader">
-            <div class="preloader__logo"><?php if (!empty($theme_sign)) { echo wp_get_attachment_image($theme_sign, 'full', '', ['class' => '']); } else { echo ''; } ?></div>
+            <div class="preloader__logo">
+                <?php if (!empty($theme_sign)) { echo wp_get_attachment_image($theme_sign, 'full', '', ['class' => '']); } else { echo ''; } ?>
+            </div>
         </div>
         <header class="header <?php if (!is_front_page()) { echo 'header--subpage'; } ?>">
             <div class="top-bar">
@@ -41,10 +43,10 @@ $body_classes = get_body_class();
                     <div class="top-bar__wrapper">
                         <div class="top-bar__content top-bar__content--left">
                             <a href="tel:<?php echo esc_html($global_phone_number); ?>" class="top-bar__phone ercodingtheme-phone-number"><?php echo esc_html($global_phone_number); ?></a>
-                            <a href="mailto:<?php echo esc_html($global_email); ?>" class="top-bar__email"><?php echo esc_html($global_email); ?></a>
+                            <a href="mailto:<?php echo esc_html($global_email); ?>" class="top-bar__email desktop-only"><?php echo esc_html($global_email); ?></a>
                         </div>
                         <?php if ('true' == $wcag): ?>
-                        <div class="top-bar__content top-bar__content--right desktop-only">
+                        <div class="top-bar__content top-bar__content--right">
                             <div class="wcag">
                                 <button class="wcag__font-size" aria-label="Zwiększ czcionkę">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.966 24.966">
@@ -113,9 +115,13 @@ $body_classes = get_body_class();
                         <?php endif; ?> <?php if (!empty($header_button)): ?>
                         <a href="<?php echo esc_html($header_button['url']); ?>" class="button nav__button <?php if (!is_front_page()) { echo 'nav__button--subpage'; } ?>" target="<?php echo esc_html($header_button['target']); ?>">
                             <?php if (!empty($header_button_before_icon)): ?>
-                            <span class="button__icon button__icon--before"><?php echo wp_get_attachment_image($header_button_before_icon, 'full', '', [ 'loading' => 'eager', 'decoding' => 'async', ]); ?></span>
+                            <span class="button__icon button__icon--before">
+                                <?php echo wp_get_attachment_image($header_button_before_icon, 'full', '', [ 'loading' => 'eager', 'decoding' => 'async', ]); ?>
+                            </span>
                             <?php endif; ?> <?php echo esc_html($header_button['title']); ?> <?php if (!empty($header_button_after_icon)): ?>
-                            <span class="button__icon button__icon--after"><?php echo wp_get_attachment_image($header_button_after_icon, 'full', '', [ 'loading' => 'eager', 'decoding' => 'async', ]); ?></span>
+                            <span class="button__icon button__icon--after">
+                                <?php echo wp_get_attachment_image($header_button_after_icon, 'full', '', [ 'loading' => 'eager', 'decoding' => 'async', ]); ?>
+                            </span>
                             <?php endif; ?>
                         </a>
                         <?php endif; ?>
