@@ -280,6 +280,31 @@
             "new_lines": ""
         },
         {
+            "key": "field_68f2337c43bdf",
+            "label": "Promotion",
+            "name": "promotion",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "true": "Odpal",
+                "false": "Wyłącz"
+            },
+            "default_value": "false",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "vertical",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_600d97402d53e",
             "label": "Header",
             "name": "",
@@ -638,5 +663,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1759954449
+    "modified": 1760703409
 }
