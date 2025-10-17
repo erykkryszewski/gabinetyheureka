@@ -1,40 +1,44 @@
 .decorated-text {
-  width: 100%;
-  position: relative;
-
-  &__wrapper {
-    padding: 0 0 0 30px;
     width: 100%;
     position: relative;
 
-    &::after {
-      content: '';
-      display: block;
-      top: 5px;
-      left: 0;
-      height: calc(100% - 10px);
-      width: 6px;
-      border-radius: $theme-border-radius;
-      background: $theme-color;
-      position: absolute;
+    &__wrapper {
+        padding: 0 0 0 30px;
+        width: 100%;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            top: 5px;
+            left: 0;
+            height: calc(100% - 10px);
+            width: 6px;
+            border-radius: $theme-border-radius;
+            background: $theme-color;
+            position: absolute;
+        }
+
+        @media (width <= 767px) {
+            padding: 0 0 0 20px;
+        }
     }
-  }
 
-  &__title {
-    text-transform: initial;
-    max-width: 1070px;
-    text-align: left;
+    &__title {
+        text-transform: initial;
+        max-width: 1070px;
+        text-align: left;
 
-    @media(max-width: 767px) {
-      font-size: 22px;
+        @media (width <= 767px) {
+            font-size: 22px;
+        }
     }
-  }
 
-  &--background {
-    background: $theme-color2;
+    &--background {
+        background: $theme-color2;
 
-    .decorated-text__title {
-      color: $white;
+        .decorated-text__title {
+            color: $white;
+        }
     }
-  }
 }
