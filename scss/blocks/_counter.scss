@@ -57,8 +57,11 @@
             color: $theme-color;
         }
 
-        @media (width <= 399px) {
-            width: 100%;
+        @media (width <= 767px) {
+            width: calc(100% - 50px);
+            text-align: center;
+            justify-content: center;
+            font-size: 15px;
         }
     }
 

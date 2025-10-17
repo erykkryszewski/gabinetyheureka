@@ -148,6 +148,10 @@ body.wcag-contrast {
         color: $white;
     }
 
+    .button.counter__button {
+        color: $theme-color;
+    }
+
     .top-bar__email,
     .top-bar__phone {
         &::before {
@@ -165,7 +169,7 @@ body.wcag-contrast {
     }
 
     .subpage-hero {
-        background: $theme-color;
+        background: $theme-color !important;
 
         h1,
         h2,
@@ -175,6 +179,10 @@ body.wcag-contrast {
         p {
             color: $white;
         }
+    }
+
+    .subpage-hero__background {
+        background: $theme-color !important;
     }
 
     .before,
