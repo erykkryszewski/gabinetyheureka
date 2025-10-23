@@ -1,7 +1,6 @@
 import $ from "jquery";
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Existing behavior: scroll if needed
     var path = window.location.pathname || "";
     var qs = window.location.search || "";
     if (path.indexOf("/specjalisci") !== -1 && /^\?_/.test(qs)) {
@@ -13,20 +12,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // ---- New: Plan4U closest date injector ----
     const $dateBox = $(".specialist__closest-date");
     if (!$dateBox.length) return;
 
     const hideBox = () => $dateBox.css("display", "none");
-
-    // Ensure there's a <strong>, and clear it so we can fill it
     let $strong = $dateBox.find("strong");
     if (!$strong.length) {
         $strong = $("<strong/>").appendTo($dateBox);
     }
     $strong.text("");
 
-    // Find zone_id from .specialist__plan4u
     const $planWrap = $(".specialist__plan4u");
     if (!$planWrap.length) return hideBox();
 
@@ -34,15 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!$iframe.length) return hideBox();
 
     let zoneId = null;
-
-    // Try from src: .../index/{id}
     const src = $iframe.attr("src") || "";
     const m1 = src.match(/\/index\/(\d+)(?:[/?#]|$)/);
-    if (m1 && m1[1]) {
-        zoneId = m1[1];
-    }
-
-    // Fallback: from iframe id like fBookVenue7
+    if (m1 && m1[1]) zoneId = m1[1];
     if (!zoneId) {
         const fid = $iframe.attr("id") || "";
         const m2 = fid.match(/fBookVenue(\d+)/);
@@ -50,25 +39,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (!zoneId) return hideBox();
+    console.log("Plan4U zone id:", zoneId);
 
-    // Fetch next available slots
     const url = `https://my.plan4u.pl/froebel/biuro/api/v1/o_NextForZone/${encodeURIComponent(zoneId)}`;
-
-    // Small helper: format "YYYY-MM-DD HH:MM:SS" -> "DD.MM.YYYY, HH:MM"
     const pad = (n) => (n < 10 ? "0" + n : "" + n);
     const formatPL = (ts) => {
-        // Treat as local time (Europe/Warsaw) for display purposes
-        // Safari-safe: replace space with 'T'
         const safe = ts.replace(" ", "T");
         const d = new Date(safe);
         if (isNaN(d.getTime())) return null;
         return `${pad(d.getDate())}.${pad(d.getMonth() + 1)}.${d.getFullYear()}, ${pad(d.getHours())}:${pad(d.getMinutes())}`;
     };
-
-    // Choose the earliest slot (API already returns ascending; we still guard)
     const pickEarliest = (arr) => {
         if (!Array.isArray(arr) || !arr.length) return null;
-        // Filter to valid dates and sort just in case
         const withDates = arr
             .map((x) => (x && x.startTime ? x.startTime : null))
             .filter(Boolean)
@@ -79,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function () {
         return withDates[0][0];
     };
 
-    // Fetch with timeout
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 7000);
 
@@ -101,11 +82,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
             $strong.text(formatted);
-            // Make sure box is visible (in case of previous state)
             $dateBox.css("display", "");
         })
         .catch(() => {
-            // Any failure -> hide
             hideBox();
         })
         .finally(() => clearTimeout(timer));
