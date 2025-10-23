@@ -70,7 +70,13 @@ $form_id = get_field("form_id", $page_id);
                                 </div>
                                 <div class="specialist__description"><?php echo apply_filters('the_content', $short_text);?></div>
                             </div>
-                            <a href="#umow-wizyte" class="button mt-4">Umów wizytę</a>
+                            <div class="specialist__visit-info">
+                                <div class="specialist__closest-date">
+                                    Najbliższy wolny termin:
+                                    <strong>20.06.2024, 14:30</strong>
+                                </div>
+                                <a href="#umow-wizyte" class="button mt-4">Umów wizytę</a>
+                            </div>
                         </div>
                     </div>
                 </div>
